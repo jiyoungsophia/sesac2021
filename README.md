@@ -8,5 +8,9 @@
 
 > [🌱 3rd Session - 210929](./TIL/day3-210929)
 
-* `버전 대응`, `Mac Catalyst`, `ViewController LifeCycle`, `iOS 계층구조`, `app icon & debugging `
+* `버전 대응`, `Mac Catalyst`, `ViewController LifeCycle`, `iOS 계층구조`, `app icon & debugging `  
+
+<br>
+
+
 
