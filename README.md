@@ -1,8 +1,6 @@
 # ssac2021
 
-#### iOS 앱 개발자 데뷔 과정 TIL ####   
-
-<br>
+#### 📚 2021.09.27 ~ 2022.03.08 ####   
 
 <br>
 
@@ -14,13 +12,13 @@
 
 > [🌱 4th Session - 210930](./TIL/day4-210930.md)
 
-* `옵셔널`, `Dictionary`, `Set`, `Tap Gesture Recognizer`, `Xcode Tips: playground, 자동완성창 읽기 `  
+* `옵셔널`, `Dictionary`, `Set`, `Tap Gesture Recognizer`, `Xcode Tips: playground 단축키, 자동완성창 읽기 `  
 
 <br>
 
 > [🌱 5th Session - 211001](./TIL/day5-211001.md)
 
-* `다크 모드 대응`, `외부 매개변수와 내부 매개변수`, `와일드 카드 식별자`,  `Xcode Tips: AutoLayout, Attributes Inspector `  
+* `다크 모드 대응`, `외부 매개변수와 내부 매개변수`, `와일드 카드 식별자`,  `Xcode Tips: AutoLayout 단축키, Attributes Inspector 구조 `  
 
 <br>
 
