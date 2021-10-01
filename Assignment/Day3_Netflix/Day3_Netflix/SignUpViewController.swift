@@ -28,7 +28,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         setTextFieldUI(nicknameTextField, placeHolder: "닉네임")
         setTextFieldUI(locationTextField, placeHolder: "위치")
         setTextFieldUI(codeTextField, placeHolder: "추천 코드 입력", keyBoard: .numberPad)
-        codeTextField.delegate = self
+//        codeTextField.delegate = self
         
         setUI()
     }
@@ -57,27 +57,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         infoSwitch.thumbTintColor = .white
     }
     
-    // 코드 텍스트필드 숫자만
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
-            return string.rangeOfCharacter(from: invalidCharacters) == nil
-        }
-    
-    
     @IBAction func tapClicked(_ sender: UITapGestureRecognizer) {
         
         view.endEditing(true)
         
     }
     
-    
     @IBAction func signUpClicked(_ sender: UIButton) {
         
-        var userEmail : String = ""
-        var userPwd : String = ""
-        
-        userEmail = emailTextField.text ?? ""
-        userPwd = passwordTextField.text ?? ""
+        let userEmail = emailTextField.text ?? ""
+        let userPwd = passwordTextField.text ?? ""
+        let userCode = Int(codeTextField.text ?? "")
         
         if ((userEmail.isEmpty) != true) {
             print("ID: \(userEmail)")
@@ -95,13 +85,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             print("비밀번호를 입력하세요")
         }
         
-        
         print("NICK: \(nicknameTextField.text ?? "")")
         print("LOCATION: \(locationTextField.text ?? "")")
-        print("CODE: \(codeTextField.text ?? "")")
         
+        if userCode != nil {
+            print("CODE: \(userCode ?? 0)")
+        } else {
+            print("숫자만 입력 가능")
+        }
     }
 
+    // 코드 텍스트필드 숫자 외에 다른 건 아예 입력 안되도록
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//            let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+//            return string.rangeOfCharacter(from: invalidCharacters) == nil
+//        }
     
  
     @IBAction func infoSwitchClicked(_ sender: UISwitch) {

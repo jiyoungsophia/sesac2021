@@ -12,7 +12,7 @@
 
 > [🌱 4th Session - 210930](./TIL/day4-210930.md)
 
-* `옵셔널`, `Dictionary`, `Set`, `Tap Gesture Recognizer`, `Xcode Tips: playground 단축키, 자동완성창 읽기 `  
+* `옵셔널`, `Dictionary`, `Set`, `Tap Gesture Recognizer`, `Xcode Tips: playground 단축키, 자동완성창 읽기 `, `Mission: 비밀번호 입력문제, 숫자만 입력되는 조건`  
 
 <br>
 
