@@ -39,8 +39,10 @@ class ViewController: UIViewController {
         
         resultLabel.numberOfLines = 0
         resultLabel.textAlignment = .center
+        
+        // FIXME: adjustsFontSizeToFitWidth 안먹음
         resultLabel.adjustsFontSizeToFitWidth = true
-        resultLabel.minimumScaleFactor = 0.1
+        resultLabel.minimumScaleFactor = 10
     }
     
     @IBAction func clickSendButton(_ sender: UIButton) {
