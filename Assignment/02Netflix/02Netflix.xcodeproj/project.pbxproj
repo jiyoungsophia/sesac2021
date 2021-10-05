@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E7CB81327041235001C72BB /* Day3_Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day3_Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7CB81327041235001C72BB /* 02Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 02Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7CB81627041235001C72BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E7CB81827041235001C72BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3E7CB81A27041235001C72BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		3E7CB80A27041235001C72BB = {
 			isa = PBXGroup;
 			children = (
-				3E7CB81527041235001C72BB /* Day3_Netflix */,
+				3E7CB81527041235001C72BB /* 02Netflix */,
 				3E7CB81427041235001C72BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		3E7CB81427041235001C72BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E7CB81327041235001C72BB /* Day3_Netflix.app */,
+				3E7CB81327041235001C72BB /* 02Netflix.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E7CB81527041235001C72BB /* Day3_Netflix */ = {
+		3E7CB81527041235001C72BB /* 02Netflix */ = {
 			isa = PBXGroup;
 			children = (
 				3E7CB81627041235001C72BB /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				3E7CB82127041238001C72BB /* LaunchScreen.storyboard */,
 				3E7CB82427041238001C72BB /* Info.plist */,
 			);
-			path = Day3_Netflix;
+			path = 02Netflix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E7CB81227041235001C72BB /* Day3_Netflix */ = {
+		3E7CB81227041235001C72BB /* 02Netflix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E7CB82727041238001C72BB /* Build configuration list for PBXNativeTarget "Day3_Netflix" */;
+			buildConfigurationList = 3E7CB82727041238001C72BB /* Build configuration list for PBXNativeTarget "02Netflix" */;
 			buildPhases = (
 				3E7CB80F27041235001C72BB /* Sources */,
 				3E7CB81027041235001C72BB /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Day3_Netflix;
+			name = 02Netflix;
 			productName = Day3_Netflix;
-			productReference = 3E7CB81327041235001C72BB /* Day3_Netflix.app */;
+			productReference = 3E7CB81327041235001C72BB /* 02Netflix.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +104,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3E7CB80E27041235001C72BB /* Build configuration list for PBXProject "Day3_Netflix" */;
+			buildConfigurationList = 3E7CB80E27041235001C72BB /* Build configuration list for PBXProject "02Netflix" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E7CB81227041235001C72BB /* Day3_Netflix */,
+				3E7CB81227041235001C72BB /* 02Netflix */,
 			);
 		};
 /* End PBXProject section */
@@ -291,7 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Day3_Netflix/Info.plist;
+				INFOPLIST_FILE = 02Netflix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,7 +309,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Day3_Netflix/Info.plist;
+				INFOPLIST_FILE = 02Netflix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E7CB80E27041235001C72BB /* Build configuration list for PBXProject "Day3_Netflix" */ = {
+		3E7CB80E27041235001C72BB /* Build configuration list for PBXProject "02Netflix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7CB82527041238001C72BB /* Debug */,
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E7CB82727041238001C72BB /* Build configuration list for PBXNativeTarget "Day3_Netflix" */ = {
+		3E7CB82727041238001C72BB /* Build configuration list for PBXNativeTarget "02Netflix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7CB82827041238001C72BB /* Debug */,
