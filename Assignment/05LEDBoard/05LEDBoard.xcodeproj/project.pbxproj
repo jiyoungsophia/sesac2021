@@ -13,11 +13,10 @@
 		3E7CB8482706F35C001C72BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CB8462706F35C001C72BB /* Main.storyboard */; };
 		3E7CB84A2706F35E001C72BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CB8492706F35E001C72BB /* Assets.xcassets */; };
 		3E7CB84D2706F35E001C72BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CB84B2706F35E001C72BB /* LaunchScreen.storyboard */; };
-		3E7CB879270B390F001C72BB /* mono_launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7CB878270B390F001C72BB /* mono_launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E7CB83D2706F35C001C72BB /* Day5_LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Day5_LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7CB83D2706F35C001C72BB /* 05LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 05LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7CB8402706F35C001C72BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E7CB8422706F35C001C72BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3E7CB8442706F35C001C72BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +24,6 @@
 		3E7CB8492706F35E001C72BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7CB84C2706F35E001C72BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E7CB84E2706F35E001C72BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E7CB878270B390F001C72BB /* mono_launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mono_launch.png; path = "../../../../Desktop/ssac/강의자료/SSAC_iOS_005/SSAC_iOS_005_Resource_BoardAsset/mono_launch.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,7 @@
 		3E7CB8342706F35C001C72BB = {
 			isa = PBXGroup;
 			children = (
-				3E7CB83F2706F35C001C72BB /* Day5_LEDBoard */,
+				3E7CB83F2706F35C001C72BB /* 05LEDBoard */,
 				3E7CB83E2706F35C001C72BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,15 +48,14 @@
 		3E7CB83E2706F35C001C72BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E7CB83D2706F35C001C72BB /* Day5_LEDBoard.app */,
+				3E7CB83D2706F35C001C72BB /* 05LEDBoard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3E7CB83F2706F35C001C72BB /* Day5_LEDBoard */ = {
+		3E7CB83F2706F35C001C72BB /* 05LEDBoard */ = {
 			isa = PBXGroup;
 			children = (
-				3E7CB878270B390F001C72BB /* mono_launch.png */,
 				3E7CB8402706F35C001C72BB /* AppDelegate.swift */,
 				3E7CB8422706F35C001C72BB /* SceneDelegate.swift */,
 				3E7CB8442706F35C001C72BB /* ViewController.swift */,
@@ -67,15 +64,15 @@
 				3E7CB84B2706F35E001C72BB /* LaunchScreen.storyboard */,
 				3E7CB84E2706F35E001C72BB /* Info.plist */,
 			);
-			path = Day5_LEDBoard;
+			path = 05LEDBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E7CB83C2706F35C001C72BB /* Day5_LEDBoard */ = {
+		3E7CB83C2706F35C001C72BB /* 05LEDBoard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E7CB8512706F35E001C72BB /* Build configuration list for PBXNativeTarget "Day5_LEDBoard" */;
+			buildConfigurationList = 3E7CB8512706F35E001C72BB /* Build configuration list for PBXNativeTarget "05LEDBoard" */;
 			buildPhases = (
 				3E7CB8392706F35C001C72BB /* Sources */,
 				3E7CB83A2706F35C001C72BB /* Frameworks */,
@@ -85,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Day5_LEDBoard;
+			name = 05LEDBoard;
 			productName = Day5_LEDBoard;
-			productReference = 3E7CB83D2706F35C001C72BB /* Day5_LEDBoard.app */;
+			productReference = 3E7CB83D2706F35C001C72BB /* 05LEDBoard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3E7CB8382706F35C001C72BB /* Build configuration list for PBXProject "Day5_LEDBoard" */;
+			buildConfigurationList = 3E7CB8382706F35C001C72BB /* Build configuration list for PBXProject "05LEDBoard" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E7CB83C2706F35C001C72BB /* Day5_LEDBoard */,
+				3E7CB83C2706F35C001C72BB /* 05LEDBoard */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7CB84D2706F35E001C72BB /* LaunchScreen.storyboard in Resources */,
-				3E7CB879270B390F001C72BB /* mono_launch.png in Resources */,
 				3E7CB84A2706F35E001C72BB /* Assets.xcassets in Resources */,
 				3E7CB8482706F35C001C72BB /* Main.storyboard in Resources */,
 			);
@@ -292,7 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Day5_LEDBoard/Info.plist;
+				INFOPLIST_FILE = 05LEDBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Day5_LEDBoard/Info.plist;
+				INFOPLIST_FILE = 05LEDBoard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E7CB8382706F35C001C72BB /* Build configuration list for PBXProject "Day5_LEDBoard" */ = {
+		3E7CB8382706F35C001C72BB /* Build configuration list for PBXProject "05LEDBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7CB84F2706F35E001C72BB /* Debug */,
@@ -335,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E7CB8512706F35E001C72BB /* Build configuration list for PBXNativeTarget "Day5_LEDBoard" */ = {
+		3E7CB8512706F35E001C72BB /* Build configuration list for PBXNativeTarget "05LEDBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7CB8522706F35E001C72BB /* Debug */,
