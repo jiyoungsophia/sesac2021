@@ -1,4 +1,4 @@
-# ssac2021
+# sesac2021
 
 #### 📚 2021.09.27 ~ 2022.03.08 ####   
 
@@ -12,7 +12,7 @@
 
 > [🌱 4th Session - 210930](./TIL/day4-210930.md)
 
-* `옵셔널`, `Dictionary`, `Set`, `Tap Gesture Recognizer`, `Xcode Tips: playground 단축키, 자동완성창 읽기 `, `Mission: 비밀번호 입력문제, 숫자만 입력되는 조건`  
+* `옵셔널`, `Dictionary`, `Set`, `Tuple`, `Xcode Tips: playground 단축키, 자동완성창 읽기 `, `Mission: 비밀번호 입력문제, 숫자만 입력되는 조건`  
 
 <br>
 
@@ -22,5 +22,9 @@
 
 <br>
 
+> [🌱 6th Session - 211005](./TIL/day6-211005.md)
 
+* `Git Status`, `Size Class`, `Navigation Controller`
+
+<br>
 
