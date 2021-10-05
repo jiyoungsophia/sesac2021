@@ -37,12 +37,13 @@ class ViewController: UIViewController {
         textColorButton.layer.borderColor = UIColor.black.cgColor
         textColorButton.setTitleColor(.red, for: .normal)
         
-        resultLabel.numberOfLines = 0
+        
         resultLabel.textAlignment = .center
         
         // FIXME: adjustsFontSizeToFitWidth 안먹음
+        resultLabel.numberOfLines = 1
         resultLabel.adjustsFontSizeToFitWidth = true
-        resultLabel.minimumScaleFactor = 10
+        resultLabel.minimumScaleFactor = 0.5
     }
     
     @IBAction func clickSendButton(_ sender: UIButton) {
