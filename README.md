@@ -4,7 +4,7 @@
 
 <br>
 
-> [🌱 3rd Session - 210929](./TIL/day3-210929.md)
+> [🌱 3rd Session - 210929](./TIL/day3-210929.md) (update : 211005)
 
 * `버전 대응`, `Mac Catalyst`, `ViewController LifeCycle`, `iOS 계층구조`, `Xcode Tips: Debugging `  
 
@@ -24,7 +24,7 @@
 
 > [🌱 6th Session - 211005](./TIL/day6-211005.md)
 
-* `Git Status`, `Size Class`, `Navigation Controller`
+* `Git Status`, `Size Class`, `Navigation Controller`, `ViewController LifeCycle 실습`
 
 <br>
 
