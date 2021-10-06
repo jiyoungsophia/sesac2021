@@ -22,9 +22,17 @@
 
 <br>
 
-> [🌱 6th Session - 211005](./TIL/day6-211005.md)
+> [🌱 6th Session - 211005](./TIL/day6-211005.md) (update: 211006)
 
 * `Git Status`, `Size Class`, `Navigation Controller`, `ViewController LifeCycle 실습`
 
 <br>
+
+> [🌱 7th Session - 211006](./TIL/day7-211006.md) 
+
+* `UIWindow와 ViewController LifeCycle`, `SwiftPM으로 라이브러리 사용하기`, `User Defaults`
+
+<br>
+
+
 
