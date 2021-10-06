@@ -34,28 +34,8 @@ class EmotionViewController: UIViewController {
     
     @IBAction func updateCountClick(_ sender: UIButton) {
         
-        switch sender.tag {
-        case 0:
-            updateCount(0)
-        case 1:
-            updateCount(1)
-        case 2:
-            updateCount(2)
-        case 3:
-            updateCount(3)
-        case 4:
-            updateCount(4)
-        case 5:
-            updateCount(5)
-        case 6:
-            updateCount(6)
-        case 7:
-            updateCount(7)
-        case 8:
-            updateCount(8)
-        default:
-            return
-        }
+        updateCount(sender.tag)
+
     }
     
     
