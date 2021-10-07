@@ -40,8 +40,10 @@ class ViewController: UIViewController {
         
         resultLabel.textAlignment = .center
         
-        // FIXME: adjustsFontSizeToFitWidth 안먹음
-        resultLabel.numberOfLines = 1
+        
+        resultLabel.numberOfLines = 0
+        // adjustsFontSizeToFitWidth : font 지정해주니까 댐,,
+        resultLabel.font = .systemFont(ofSize: 130)
         resultLabel.adjustsFontSizeToFitWidth = true
         resultLabel.minimumScaleFactor = 0.5
     }
