@@ -36,7 +36,7 @@
 
 > [🌱 8th Session - 211007](./TIL/day8-211007.md) 
 
-* `Class`, `Struct`, `Class vs Struct`
+* `Class`, `Struct`, `Class vs Struct`, `DateFormatter`
 
 <br>
 

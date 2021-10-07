@@ -11,30 +11,53 @@ class ViewController: UIViewController {
 
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var backgroundImages: [UIImageView]!
+    @IBOutlet var dayLabels: [UILabel]!
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
+    
+    }
+    
+    func setUI() {
         if #available(iOS 14.0, *) {
             datePicker.preferredDatePickerStyle = .inline
         }
+        
+        for i in 0..<backgroundImages.count {
+            backgroundImages[i].contentMode = .scaleAspectFill
+            backgroundImages[i].layer.cornerRadius = 10
+        }
+        
+        for i in 0..<dayLabels.count {
+            dayLabels[i].font = .boldSystemFont(ofSize: 18)
+            dayLabels[i].textColor = .white
+            dayLabels[i].numberOfLines = 2
+            dayLabels[i].textAlignment = .center
+        }
+        
+        calulateDate(datePicker)
+        
     }
   
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-        print(datePicker.date)
-        print(sender.date)
         
-        //DateFormatter: 1. DateFormat 2. 한국
-        let format = DateFormatter()
-        format.dateFormat = "yy/MM/dd" // 21/10/20 데이트포맷확인
-        
-        let value = format.string(from: sender.date)
-        print(value)
-        
-        //100일 뒤: TimeInterval, Calendar
-        let afterDate = Date(timeInterval: 86400 * 100, since: sender.date)
-        print(afterDate)
+        calulateDate(datePicker)
     }
 
+    func calulateDate(_ sender: UIDatePicker) {
 
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년\nMM월 dd일"
+
+        for i in 0..<dayLabels.count {
+            let afterDate = Date(timeInterval: TimeInterval(86400 * 100 * ( i + 1 )), since: sender.date)
+            let resultDate = format.string(from: afterDate)
+            dayLabels[i].text = resultDate
+        }
+    }
 }
 
