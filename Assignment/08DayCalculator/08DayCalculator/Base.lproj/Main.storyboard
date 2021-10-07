@@ -188,6 +188,10 @@
                         <outletCollection property="dayLabels" destination="tFC-AZ-lnc" collectionClass="NSMutableArray" id="Nq3-oA-6xy"/>
                         <outletCollection property="dayLabels" destination="khw-zh-iIf" collectionClass="NSMutableArray" id="Jbz-Xi-ohs"/>
                         <outletCollection property="dayLabels" destination="6hb-d0-kJe" collectionClass="NSMutableArray" id="e6o-Ho-XUG"/>
+                        <outletCollection property="backView" destination="1da-dT-tDI" collectionClass="NSMutableArray" id="iRa-Vt-hQR"/>
+                        <outletCollection property="backView" destination="g4I-Ke-vK0" collectionClass="NSMutableArray" id="quR-LU-jse"/>
+                        <outletCollection property="backView" destination="MX5-Wq-QS2" collectionClass="NSMutableArray" id="AUL-3E-uUr"/>
+                        <outletCollection property="backView" destination="Bhe-cp-f2L" collectionClass="NSMutableArray" id="o60-b2-zIN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

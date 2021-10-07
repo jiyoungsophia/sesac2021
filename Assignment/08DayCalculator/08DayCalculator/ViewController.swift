@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var backgroundImages: [UIImageView]!
     @IBOutlet var dayLabels: [UILabel]!
+    @IBOutlet var backView: [UIView]!
     
  
     override func viewDidLoad() {
@@ -37,6 +38,14 @@ class ViewController: UIViewController {
             dayLabels[i].textColor = .white
             dayLabels[i].numberOfLines = 2
             dayLabels[i].textAlignment = .center
+        }
+        
+        for i in 0..<backView.count {
+            backView[i].layer.backgroundColor = UIColor.clear.cgColor
+            backView[i].layer.shadowColor = UIColor.black.cgColor
+            backView[i].layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            backView[i].layer.shadowOpacity = 0.2
+            backView[i].layer.shadowRadius = 4.0
         }
         
         calulateDate(datePicker)
