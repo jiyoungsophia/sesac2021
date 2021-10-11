@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		3E2DFCB827100CE300B57855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2DFCB627100CE300B57855 /* LaunchScreen.storyboard */; };
 		3E2DFCC32710178C00B57855 /* DrinkWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2DFCC22710178C00B57855 /* DrinkWaterViewController.swift */; };
 		3E2DFCC62710179B00B57855 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2DFCC52710179B00B57855 /* ProfileViewController.swift */; };
+		3E2DFCCA27116CA600B57855 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 3E2DFCC927116CA600B57855 /* TextFieldEffects */; };
+		3E2DFCCE2711726100B57855 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3E2DFCCD2711726100B57855 /* IQKeyboardManagerSwift */; };
+		3E2DFCD1271179C100B57855 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2DFCD0271179C100B57855 /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,7 @@
 		3E2DFCB927100CE300B57855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E2DFCC22710178C00B57855 /* DrinkWaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterViewController.swift; sourceTree = "<group>"; };
 		3E2DFCC52710179B00B57855 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3E2DFCD0271179C100B57855 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2DFCCA27116CA600B57855 /* TextFieldEffects in Frameworks */,
+				3E2DFCCE2711726100B57855 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 				3E2DFCC22710178C00B57855 /* DrinkWaterViewController.swift */,
 				3E2DFCC52710179B00B57855 /* ProfileViewController.swift */,
 				3E2DFCB427100CE300B57855 /* Assets.xcassets */,
+				3E2DFCD0271179C100B57855 /* UIColor+Extensions.swift */,
 				3E2DFCB627100CE300B57855 /* LaunchScreen.storyboard */,
 				3E2DFCB927100CE300B57855 /* Info.plist */,
 			);
@@ -86,6 +93,10 @@
 			dependencies = (
 			);
 			name = 09DrinkWater;
+			packageProductDependencies = (
+				3E2DFCC927116CA600B57855 /* TextFieldEffects */,
+				3E2DFCCD2711726100B57855 /* IQKeyboardManagerSwift */,
+			);
 			productName = 09DrinkWater;
 			productReference = 3E2DFCA827100CDF00B57855 /* 09DrinkWater.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +124,10 @@
 				Base,
 			);
 			mainGroup = 3E2DFC9F27100CDF00B57855;
+			packageReferences = (
+				3E2DFCC827116CA600B57855 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				3E2DFCCC2711726100B57855 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 3E2DFCA927100CDF00B57855 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E2DFCC32710178C00B57855 /* DrinkWaterViewController.swift in Sources */,
+				3E2DFCD1271179C100B57855 /* UIColor+Extensions.swift in Sources */,
 				3E2DFCAC27100CDF00B57855 /* AppDelegate.swift in Sources */,
 				3E2DFCC62710179B00B57855 /* ProfileViewController.swift in Sources */,
 				3E2DFCAE27100CDF00B57855 /* SceneDelegate.swift in Sources */,
@@ -343,6 +359,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3E2DFCC827116CA600B57855 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+		3E2DFCCC2711726100B57855 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3E2DFCC927116CA600B57855 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E2DFCC827116CA600B57855 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+		3E2DFCCD2711726100B57855 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E2DFCCC2711726100B57855 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E2DFCA027100CDF00B57855 /* Project object */;
 }
