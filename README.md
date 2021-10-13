@@ -52,7 +52,7 @@
 
 <br>
 
-> [🌱 11th Session - 211013](./TIL/day10-211013.md) 
+> [🌱 11th Session - 211013](./TIL/day11-211013.md) 
 
 * `TypeCasting`, `Stored Property`, `☠️Computed Property☠️`, `Property Observer`
 
