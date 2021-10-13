@@ -46,5 +46,11 @@
 
 <br>
 
+> [🌱 10th Session - 211008](./TIL/day10-211012.md) 
+
+* `Optional Binding`, `Optional Chaining`, `TableViewCell Reuse mechanism`
+
+<br>
+
 
 
