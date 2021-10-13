@@ -46,9 +46,15 @@
 
 <br>
 
-> [🌱 10th Session - 211008](./TIL/day10-211012.md) 
+> [🌱 10th Session - 211012](./TIL/day10-211012.md) 
 
 * `Optional Binding`, `Optional Chaining`, `TableViewCell Reuse mechanism`
+
+<br>
+
+> [🌱 11th Session - 211013](./TIL/day10-211013.md) 
+
+* `TypeCasting`, `Stored Property`, `☠️Computed Property☠️`, `Property Observer`
 
 <br>
 
