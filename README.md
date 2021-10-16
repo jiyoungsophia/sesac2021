@@ -52,9 +52,19 @@
 
 <br>
 
-> [🌱 11th Session - 211013](./TIL/day11-211013.md) 
+> [🌱 11th Session - 211013](./TIL/day11-211013.md) (update: 211005)
 
-* `TypeCasting`, `Stored Property`, `☠️Computed Property☠️`, `Property Observer`
+* `TypeCasting`, `Stored Property`, `Computed Property`, `Property Observer`
+
+<br>
+
+> [🌱 12th Session - 211014](./TIL/day12-211014.md) (update later)
+
+<br>
+
+> [🌱 13th Session - 211015](./TIL/day15-211015.md) 
+
+* `CodeReview: UserDefaults를 이용한 메모 데이터 저장하고 사용하기`, `화면 전환`
 
 <br>
 
