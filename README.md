@@ -64,15 +64,15 @@
 
 <br>
 
-> [🌱 12th Session - 211014](./TIL/day12-211014.md) (update later)
+> [🌱 12th Session - 211014](./TIL/day12-211014.md) 
+
+* `Type Property: static`, `Instance Method: mutating`, `Type Method: static vs class`, `Signleton Pattern`
 
 <br>
 
 > [🌱 13th Session - 211015](./TIL/day13-211015.md) 
 
 * `CodeReview: UserDefaults를 이용한 메모 데이터 저장하고 사용하기`, `화면 전환`
-
-
 
 </details>
 
