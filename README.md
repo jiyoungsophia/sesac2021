@@ -4,6 +4,12 @@
 
 <br>
 
+
+
+<details>
+    <summary><strong>TIL</strong></summary>
+
+
 > [🌱 3rd Session - 210929](./TIL/day3-210929.md) (update : 211005)
 
 * `버전 대응`, `Mac Catalyst`, `ViewController LifeCycle`, `iOS 계층구조`, `Xcode Tips: Debugging `  
@@ -66,7 +72,9 @@
 
 * `CodeReview: UserDefaults를 이용한 메모 데이터 저장하고 사용하기`, `화면 전환`
 
-<br>
+
+
+</details>
 
 
 
