@@ -63,6 +63,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textDidChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Nv2-fd-8Dm"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMZ-89-00L">
                                 <rect key="frame" x="247" y="631" width="42" height="21"/>
@@ -85,8 +88,10 @@
                             <constraint firstItem="1D6-R7-dcU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G5f-uh-Cmy"/>
                             <constraint firstItem="xDQ-Wp-EOw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jcb-RY-ooS"/>
                             <constraint firstItem="xMZ-89-00L" firstAttribute="leading" secondItem="Tp4-Zq-u8n" secondAttribute="trailing" id="LJv-0O-nR5"/>
+                            <constraint firstItem="O6q-Oq-WSo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MOv-i1-9DX"/>
                             <constraint firstItem="xDQ-Wp-EOw" firstAttribute="top" secondItem="O6q-Oq-WSo" secondAttribute="bottom" constant="10" id="RE8-hs-QXf"/>
                             <constraint firstItem="e81-h0-f4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Tn0-2W-D2Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O6q-Oq-WSo" secondAttribute="trailing" constant="20" id="dgL-n5-XU1"/>
                             <constraint firstItem="Tp4-Zq-u8n" firstAttribute="firstBaseline" secondItem="xMZ-89-00L" secondAttribute="firstBaseline" id="dhZ-fu-gfB"/>
                             <constraint firstItem="e81-h0-f4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="kKp-CA-d9G"/>
                             <constraint firstItem="O6q-Oq-WSo" firstAttribute="centerX" secondItem="xDQ-Wp-EOw" secondAttribute="centerX" id="lhI-jc-bOO"/>
@@ -212,6 +217,9 @@
                         <outlet property="profileImageView" destination="Ngh-oT-HGx" id="hpN-Cs-ksb"/>
                         <outlet property="saveButton" destination="f1X-49-x70" id="LjO-Rz-fkr"/>
                         <outlet property="weightTextField" destination="YKl-8I-K5j" id="aeJ-Sa-qA4"/>
+                        <outletCollection property="inputTextField" destination="TPa-se-0ke" collectionClass="NSMutableArray" id="hmG-jb-TLC"/>
+                        <outletCollection property="inputTextField" destination="qQf-c6-5nb" collectionClass="NSMutableArray" id="lIO-rC-Lsg"/>
+                        <outletCollection property="inputTextField" destination="YKl-8I-K5j" collectionClass="NSMutableArray" id="Xvc-IJ-49A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsG-wE-Nsx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

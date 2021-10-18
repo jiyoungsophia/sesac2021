@@ -16,14 +16,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var heightTextField: HoshiTextField!
     @IBOutlet var weightTextField: HoshiTextField!
     
+    @IBOutlet var inputTextField: [HoshiTextField]!
+    
+    
     // 입력받은 사용자 정보 튜플
     var userInfo: (name: String, height: Float, weight: Float, water: Float) = ("", 0, 0, 0.0)
     // 입력받은 사용자 정보를 userdefaults에 넘겨주기 위한 배열
     var userInfoArray: [String] = []
     // userdefaults에 담긴 정보 사용하기 위한 배열
     var userInfoList: [String] = []
-    // 필수 입력 텍스트필드
-    var essentialFieldList = [UITextField]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +33,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         setTextFieldUI(nicknameTextField, placeHolder: "닉네임을 설정해주세요", keyBoard: .default)
         setTextFieldUI(heightTextField, placeHolder: "키(cm)를 설정해주세요")
         setTextFieldUI(weightTextField, placeHolder: "몸무게(kg)를 설정해주세요")
-        // func textField 위한 델리게이트
-        heightTextField.delegate = self
-        weightTextField.delegate = self
-        // 필수 입력 텍스트필드
-        essentialFieldList = [nicknameTextField, heightTextField, weightTextField]
+        
     }
     
     
@@ -56,6 +53,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             heightTextField.text = ""
             weightTextField.text = ""
         }
+        
+        // func textField 위한 델리게이트
+        heightTextField.delegate = self
+        weightTextField.delegate = self
     }
 
     func setTextFieldUI(_ tf: HoshiTextField, placeHolder ph: String, keyBoard kb: UIKeyboardType = .numberPad) {
@@ -76,7 +77,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func clickSaveButton(_ sender: UIBarButtonItem) {
         // 필수 입력 텍스트필드 비었으면 알러트 띄우기
-        for field in essentialFieldList {
+        for field in inputTextField {
                     if !isFilled(field) {
                         saveAlert(field)
                         break
@@ -120,6 +121,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     func calculateWater() {
         
         userInfoList.removeAll()
+        //userInfoArray append 문제 해결
+        userInfoArray.removeAll()
         
         userInfo.name = nicknameTextField.text ?? ""
         userInfo.height = Float(heightTextField.text ?? "") ?? 0

@@ -57,8 +57,8 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
     var waterInfoList : [Float] = []
     
     var recommendedWater : Float = 2000.0
-    var intTotal : Int = 0
-    var intPercent : Int = 0
+    var totalWater : Int = 0
+    var percentWater : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +101,7 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
         percentLabel.font = .systemFont(ofSize: 17)
                 
         // 입력 텍스트필트
+        inputTextField.delegate = self
         inputTextField.keyboardType = .numberPad
         inputTextField.borderStyle = .none
         inputTextField.tintColor = .white
@@ -108,7 +109,6 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
         inputTextField.textAlignment = .right
         inputTextField.font = .systemFont(ofSize: 30)
         inputTextField.textColor = .white
-        inputTextField.delegate = self
         inputTextField.placeholder = "마신 양"
         mlLabel.text = "ml"
         mlLabel.font = .systemFont(ofSize: 30)
@@ -155,13 +155,13 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
         
         
         waterInfoList = UserDefaults.standard.array(forKey: "waterInfo") as? [Float] ?? [Float]()
-        intTotal = Int(waterInfoList[0])
-        intPercent = Int(round(waterInfoList[1]))
+        totalWater = Int(waterInfoList[0])
+        percentWater = Int(round(waterInfoList[1]))
         
         if waterInfoList.isEmpty != true {
-            totalMlLabel.text = "\(intTotal)ml"
-            percentLabel.text = "목표의 \(intPercent)%"
-            changePlantImage(intPercent)
+            totalMlLabel.text = "\(totalWater)ml"
+            percentLabel.text = "목표의 \(percentWater)%"
+            changePlantImage(percentWater)
         }
         
         setLeftLabelColor()
@@ -211,20 +211,20 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
         if waterInfoList.isEmpty == true {
             waterInfoList.append(0.0)
             waterInfoList.append(0.0)
-            intTotal = Int(waterInfoList[0])
-            intPercent = Int(round(waterInfoList[1]))
-            totalMlLabel.text = "\(intTotal)ml"
-            percentLabel.text = "목표의 \(intPercent)%"
-            changePlantImage(intPercent)
+            totalWater = Int(waterInfoList[0])
+            percentWater = Int(round(waterInfoList[1]))
+            totalMlLabel.text = "\(totalWater)ml"
+            percentLabel.text = "목표의 \(percentWater)%"
+            changePlantImage(percentWater)
             defaultLabel.textColor = .white
             totalMlLabel.textColor = .white
             percentLabel.textColor = .white
         } else {
-            intTotal = Int(waterInfoList[0])
-            intPercent = Int(round(waterInfoList[1]))
-            totalMlLabel.text = "\(intTotal)ml"
-            percentLabel.text = "목표의 \(intPercent)%"
-            changePlantImage(intPercent)
+            totalWater = Int(waterInfoList[0])
+            percentWater = Int(round(waterInfoList[1]))
+            totalMlLabel.text = "\(totalWater)ml"
+            percentLabel.text = "목표의 \(percentWater)%"
+            changePlantImage(percentWater)
 
             setLeftLabelColor()
         }
@@ -255,12 +255,24 @@ class DrinkWaterViewController: UIViewController, UITextFieldDelegate {
         recommendedLabel.textColor = .white
     }
     
+
+    // 입력 글자 수 제한
+    @IBAction func textDidChanged(_ sender: UITextField) {
+        checkMaxLength(textField: inputTextField, maxLength: 4)
+    }
     
+    func checkMaxLength(textField: UITextField!, maxLength: Int) {
+        if (textField.text!.count > maxLength) {
+            textField.deleteBackward()
+        }
+    }
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
         return string.rangeOfCharacter(from: invalidCharacters) == nil
     }
+        
     
     @IBAction func tapBackground(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
