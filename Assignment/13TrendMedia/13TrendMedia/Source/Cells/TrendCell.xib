@@ -126,7 +126,7 @@
                                     <imageReference key="image" image="link.circle.fill" catalog="system" symbolScale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="linkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IVz-kR-Sdn"/>
+                                    <action selector="linkButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="meM-vf-hCs"/>
                                 </connections>
                             </button>
                         </subviews>

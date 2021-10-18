@@ -75,6 +75,7 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         cell.releaseDateLabel.text = row.releaseDate
         
         cell.cellDelegate = self
+        cell.cellIndexPath = indexPath.row
         
         return cell
     }
@@ -91,11 +92,11 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension TrendViewController: LinkButtonCellDelegate {
-    func linkButtonClicked() {
+    func linkButtonClicked(indexPathRow: Int) {
         let vc = self.storyboard?.instantiateViewController(identifier: "WebViewController") as! WebViewController
         
         // indexPath를 싱글톤이나 스태틱으로 받을수는 잇겟으나 옳은 방법은 아닌 너낌,,
-        vc.titleData = tvShowList.tvShow[0].title
+        vc.titleData = tvShowList.tvShow[indexPathRow].title
         self.present(vc, animated: true, completion: nil)
         
  

@@ -9,7 +9,7 @@ import UIKit
 
 
 protocol LinkButtonCellDelegate {
-    func linkButtonClicked()
+    func linkButtonClicked(indexPathRow: Int)
 }
 
 class TrendCell: UITableViewCell {
@@ -22,8 +22,8 @@ class TrendCell: UITableViewCell {
     @IBOutlet weak var koTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     
-    var itemIndex = 0
     var cellDelegate: LinkButtonCellDelegate?
+    var cellIndexPath: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,7 +34,7 @@ class TrendCell: UITableViewCell {
     
     @IBAction func linkButtonTapped(_ sender: UIButton) {
         
-        cellDelegate?.linkButtonClicked()
+        cellDelegate?.linkButtonClicked(indexPathRow: cellIndexPath)
     }
     
     
