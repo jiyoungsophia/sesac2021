@@ -74,6 +74,14 @@
 
 * `CodeReview: UserDefaults를 이용한 메모 데이터 저장하고 사용하기`, `화면 전환`
 
+<br>
+
+> [🌱 14th Session - 211018](./TIL/day14-211018.md) 
+
+* `Protocol & Protocol Method`, `Protocol Property`, `Optional Protocol`, `CaseIterable`
+
+<br>
+
 </details>
 
 
