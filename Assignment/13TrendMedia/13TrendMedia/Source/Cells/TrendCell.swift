@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+protocol LinkButtonCellDelegate {
+    func linkButtonClicked()
+}
+
 class TrendCell: UITableViewCell {
 
     @IBOutlet weak var backView: UIView!
@@ -17,7 +22,8 @@ class TrendCell: UITableViewCell {
     @IBOutlet weak var koTitleLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     
-    
+    var itemIndex = 0
+    var cellDelegate: LinkButtonCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +31,12 @@ class TrendCell: UITableViewCell {
         setUI()
         
     }
+    
+    @IBAction func linkButtonTapped(_ sender: UIButton) {
+        
+        cellDelegate?.linkButtonClicked()
+    }
+    
     
     func setUI(){
         backView.setViewShadow()

@@ -94,6 +94,37 @@
             </objects>
             <point key="canvasLocation" x="1142.0289855072465" y="87.723214285714278"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="fFZ-B4-Uyv">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="OB3-cN-gEL" customClass="WebViewController" customModule="_3TrendMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gls-sG-E2n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28Q-Vg-4za">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="WaL-zd-HUg"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eJg-31-HIy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="28Q-Vg-4za" firstAttribute="top" secondItem="Gls-sG-E2n" secondAttribute="top" id="G0u-px-5Qh"/>
+                            <constraint firstItem="28Q-Vg-4za" firstAttribute="leading" secondItem="eJg-31-HIy" secondAttribute="leading" id="HM2-rQ-T92"/>
+                            <constraint firstItem="28Q-Vg-4za" firstAttribute="trailing" secondItem="eJg-31-HIy" secondAttribute="trailing" id="ysK-9n-0Aa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navTitle" destination="WaL-zd-HUg" id="yq0-0c-KYz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHp-sQ-6op" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="88"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="aPD-nG-Y2N">
             <objects>

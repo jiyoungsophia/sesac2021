@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TrendViewController: UIViewController {
 
@@ -67,18 +68,13 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         cell.enTitleLabel.text = row.title
         
         let url = URL(string: row.backdropImage)
-        //DispatchQueue를 쓰는 이유 -> 이미지가 클 경우 이미지를 다운로드 받기 까지 잠깐의 멈춤이 생길수 있다. (이유 : 싱글 쓰레드로 작동되기때문에)
-        //DispatchQueue를 쓰면 멀티 쓰레드로 이미지가 클경우에도 멈춤이 생기지 않는다.
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: url!)
-            DispatchQueue.main.async {
-                cell.posterImageView.image = UIImage(data: data!)
-            }
-        }
+        cell.posterImageView.kf.setImage(with: url)
         
         cell.rateLabel.text = "\(row.rate)"
         cell.koTitleLabel.text = row.title
         cell.releaseDateLabel.text = row.releaseDate
+        
+        cell.cellDelegate = self
         
         return cell
     }
@@ -87,7 +83,23 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         let sb = UIStoryboard(name: "Cast", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "CastViewController") as! CastViewController
         
+        vc.tvShowData = tvShowList.tvShow[indexPath.row]
+        
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+}
+
+extension TrendViewController: LinkButtonCellDelegate {
+    func linkButtonClicked() {
+        let vc = self.storyboard?.instantiateViewController(identifier: "WebViewController") as! WebViewController
+        
+        // indexPath를 싱글톤이나 스태틱으로 받을수는 잇겟으나 옳은 방법은 아닌 너낌,,
+        vc.titleData = tvShowList.tvShow[0].title
+        self.present(vc, animated: true, completion: nil)
+        
+ 
+    }
+    
+    
 }

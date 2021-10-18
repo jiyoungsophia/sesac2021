@@ -26,16 +26,31 @@ class CastViewController: UIViewController {
         ["name" : "이멜다 스탠턴", "cast": "돌로레스 엄브릿지"]
     ]
     
-
+    var tvShowData : TvShow?
+    
+    
+    @IBOutlet weak var headerBackImageView: UIImageView!
+    @IBOutlet weak var headerPosterImageView: UIImageView!
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    
     @IBOutlet weak var castTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         castTableView.delegate = self
         castTableView.dataSource = self
+        
+        setData()
     }
     
+    func setData() {
 
+        let url = URL(string: tvShowData?.backdropImage ?? "")
+        headerBackImageView.kf.setImage(with: url)
+        headerPosterImageView.kf.setImage(with: url)
+        headerTitleLabel.text = tvShowData?.title
+        
+    }
 }
 
 extension CastViewController: UITableViewDelegate, UITableViewDataSource {
@@ -51,13 +66,11 @@ extension CastViewController: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = castDic[indexPath.row]["name"]
         cell.castLabel.text = castDic[indexPath.row]["cast"]
         
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIScreen.main.bounds.height / 11
     }
-    
     
 }

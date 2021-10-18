@@ -19,9 +19,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-BY-svT">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="7dI-hy-sC5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rmn-OI-h4Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cast" translatesAutoresizingMaskIntoConstraints="NO" id="M79-4w-baE">
+                                            <rect key="frame" x="20" y="45" width="90" height="135"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="M79-4w-baE" secondAttribute="height" multiplier="2:3" id="Ukr-Iu-R96"/>
+                                                <constraint firstAttribute="width" constant="90" id="pnA-eL-Vcz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-As-0FM">
+                                            <rect key="frame" x="130" y="156" width="264" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Rmn-OI-h4Q" firstAttribute="leading" secondItem="7dI-hy-sC5" secondAttribute="leading" id="5Dc-UP-qXv"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rmn-OI-h4Q" secondAttribute="trailing" id="9SR-S7-JCS"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rmn-OI-h4Q" secondAttribute="bottom" id="Aym-mt-ssY"/>
+                                        <constraint firstItem="M79-4w-baE" firstAttribute="leading" secondItem="7dI-hy-sC5" secondAttribute="leading" constant="20" id="I7U-4L-lOX"/>
+                                        <constraint firstAttribute="trailing" secondItem="mdt-As-0FM" secondAttribute="trailing" constant="20" id="WrJ-W4-YGu"/>
+                                        <constraint firstItem="Rmn-OI-h4Q" firstAttribute="top" secondItem="7dI-hy-sC5" secondAttribute="top" id="aJ3-uX-P06"/>
+                                        <constraint firstItem="mdt-As-0FM" firstAttribute="leading" secondItem="M79-4w-baE" secondAttribute="trailing" constant="20" id="cpW-jW-dYq"/>
+                                        <constraint firstItem="mdt-As-0FM" firstAttribute="bottom" secondItem="M79-4w-baE" secondAttribute="bottom" id="hp0-fR-lwv"/>
+                                        <constraint firstAttribute="bottom" secondItem="M79-4w-baE" secondAttribute="bottom" constant="20" id="qex-O8-anY"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CastCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="CastCell" rowHeight="61" id="97u-Tw-7JT" customClass="CastCell" customModule="_3TrendMedia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="61"/>
+                                        <rect key="frame" x="0.0" y="228" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="97u-Tw-7JT" id="fCH-sR-dYa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
@@ -77,6 +111,9 @@
                     </view>
                     <connections>
                         <outlet property="castTableView" destination="OVi-BY-svT" id="SYD-Ys-u6T"/>
+                        <outlet property="headerBackImageView" destination="Rmn-OI-h4Q" id="aDn-k3-Tm7"/>
+                        <outlet property="headerPosterImageView" destination="M79-4w-baE" id="X0l-yq-JZ1"/>
+                        <outlet property="headerTitleLabel" destination="mdt-As-0FM" id="alJ-4S-JJ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0g9-gk-3uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
