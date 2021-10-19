@@ -82,6 +82,12 @@
 
 <br>
 
+> [🌱 15th Session - 211019](./TIL/day15-211019.md) s
+
+* `Raw Strings`, `CollectionView History`
+
+<br>
+
 </details>
 
 
