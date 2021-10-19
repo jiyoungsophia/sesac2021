@@ -27,7 +27,7 @@ class CastViewController: UIViewController {
     ]
     
     var tvShowData : TvShow?
-    
+    var isClicked = false
     
     @IBOutlet weak var headerBackImageView: UIImageView!
     @IBOutlet weak var headerPosterImageView: UIImageView!
@@ -51,26 +51,72 @@ class CastViewController: UIViewController {
         headerTitleLabel.text = tvShowData?.title
         
     }
+    
+    @objc func overviewButtonClicked(selectButton: UIButton) {
+        isClicked = !isClicked
+        castTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
+     
+    }
 }
 
 extension CastViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return castDic.count
+        if section == 0 {
+            return 1
+        } else if section == 1 {
+            return castDic.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CastCell" ) as? CastCell else {
+        
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCell" ) as? OverviewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.overviewLabel.text = tvShowData?.overview
+            
+            let image = isClicked ? UIImage(systemName: "chevron.up") : UIImage(systemName: "chevron.down")
+            cell.overviewButton.setImage(image, for: .normal)
+            cell.overviewLabel.numberOfLines = isClicked ? 0 : 2
+            cell.overviewButton.addTarget(self, action: #selector(overviewButtonClicked(selectButton:)), for: .touchUpInside)
+        
+            
+            return cell
+        
+        } else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CastCell" ) as? CastCell else {
+                return UITableViewCell()
+            }
+            
+            cell.nameLabel.text = castDic[indexPath.row]["name"]
+            cell.castLabel.text = castDic[indexPath.row]["cast"]
+            
+            return cell
+            
+        } else {
             return UITableViewCell()
         }
-        
-        cell.nameLabel.text = castDic[indexPath.row]["name"]
-        cell.castLabel.text = castDic[indexPath.row]["cast"]
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height / 11
+        if indexPath.section == 0 {
+            return UITableView.automaticDimension
+        } else if indexPath.section == 1 {
+            return UIScreen.main.bounds.height / 11
+        } else {
+            return 0
+        }
+        
     }
+    
+    
     
 }

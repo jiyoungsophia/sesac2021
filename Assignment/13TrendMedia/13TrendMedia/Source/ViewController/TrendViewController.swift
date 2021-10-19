@@ -34,7 +34,6 @@ class TrendViewController: UIViewController {
     
     
     @IBAction func searchButtonClicked(_ sender: UIBarButtonItem) {
-        print("눌리니")
         let sb = UIStoryboard(name: "Search", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         
@@ -42,6 +41,16 @@ class TrendViewController: UIViewController {
         
         self.present(vc, animated: true, completion: nil)
     }
+    
+    @IBAction func bookButtonClicked(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "Book", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "BookViewController") as! BookViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
     
 }
 
@@ -95,12 +104,9 @@ extension TrendViewController: LinkButtonCellDelegate {
     func linkButtonClicked(indexPathRow: Int) {
         let vc = self.storyboard?.instantiateViewController(identifier: "WebViewController") as! WebViewController
         
-        // indexPath를 싱글톤이나 스태틱으로 받을수는 잇겟으나 옳은 방법은 아닌 너낌,,
         vc.titleData = tvShowList.tvShow[indexPathRow].title
         self.present(vc, animated: true, completion: nil)
         
  
     }
-    
-    
 }

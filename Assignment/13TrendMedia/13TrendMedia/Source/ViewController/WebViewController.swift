@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import WebKit
 
 class WebViewController: UIViewController {
     
     @IBOutlet weak var navTitle: UINavigationItem!
-   
     var titleData: String?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

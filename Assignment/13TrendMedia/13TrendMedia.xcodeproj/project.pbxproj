@@ -10,6 +10,12 @@
 		3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1320271AC80F006F3E79 /* TrendCell.swift */; };
 		3E4D1323271AC80F006F3E79 /* TrendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D1321271AC80F006F3E79 /* TrendCell.xib */; };
 		3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */; };
+		3E725020271E86FA00F23AEA /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E72501F271E86FA00F23AEA /* Book.storyboard */; };
+		3E725023271E883F00F23AEA /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E725022271E883F00F23AEA /* OverviewCell.swift */; };
+		3E725027271E8B8700F23AEA /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E725025271E8B8700F23AEA /* BookCell.swift */; };
+		3E725028271E8B8700F23AEA /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E725026271E8B8700F23AEA /* BookCell.xib */; };
+		3E72502B271E8CF700F23AEA /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E72502A271E8CF700F23AEA /* BookViewController.swift */; };
+		3E725043271ED1EB00F23AEA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E725042271ED1EB00F23AEA /* UIColor+Extensions.swift */; };
 		3EBC62B3271BEA8F009646E0 /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC62B2271BEA8F009646E0 /* CastCell.swift */; };
 		3EBC62B7271BEE9A009646E0 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC62B6271BEE9A009646E0 /* SearchCell.swift */; };
 		3EBC62E9271D4A85009646E0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3EBC62E8271D4A85009646E0 /* Kingfisher */; };
@@ -34,6 +40,12 @@
 		3E4D1320271AC80F006F3E79 /* TrendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCell.swift; sourceTree = "<group>"; };
 		3E4D1321271AC80F006F3E79 /* TrendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendCell.xib; sourceTree = "<group>"; };
 		3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3E72501F271E86FA00F23AEA /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
+		3E725022271E883F00F23AEA /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
+		3E725025271E8B8700F23AEA /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		3E725026271E8B8700F23AEA /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
+		3E72502A271E8CF700F23AEA /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		3E725042271ED1EB00F23AEA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		3EBC62B2271BEA8F009646E0 /* CastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
 		3EBC62B6271BEE9A009646E0 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		3EBC62EF271D6645009646E0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,9 @@
 				3E4D1321271AC80F006F3E79 /* TrendCell.xib */,
 				3EBC62B2271BEA8F009646E0 /* CastCell.swift */,
 				3EBC62B6271BEE9A009646E0 /* SearchCell.swift */,
+				3E725022271E883F00F23AEA /* OverviewCell.swift */,
+				3E725025271E8B8700F23AEA /* BookCell.swift */,
+				3E725026271E8B8700F23AEA /* BookCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -82,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */,
+				3E725042271ED1EB00F23AEA /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +132,7 @@
 				3EE9A85C27193C2C00EFAF97 /* Trend.storyboard */,
 				3EE9A85F27193C3D00EFAF97 /* Search.storyboard */,
 				3EE9A86227193C5300EFAF97 /* Cast.storyboard */,
+				3E72501F271E86FA00F23AEA /* Book.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -128,6 +145,7 @@
 				3EE9A86927193CB900EFAF97 /* CastViewController.swift */,
 				3EE9A86527193C6700EFAF97 /* TrendViewController.swift */,
 				3EBC62EF271D6645009646E0 /* WebViewController.swift */,
+				3E72502A271E8CF700F23AEA /* BookViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -231,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EE9A85D27193C2C00EFAF97 /* Trend.storyboard in Resources */,
+				3E725020271E86FA00F23AEA /* Book.storyboard in Resources */,
+				3E725028271E8B8700F23AEA /* BookCell.xib in Resources */,
 				3E4D1323271AC80F006F3E79 /* TrendCell.xib in Resources */,
 				3EE9A8432719397D00EFAF97 /* LaunchScreen.storyboard in Resources */,
 				3EE9A8402719397D00EFAF97 /* Assets.xcassets in Resources */,
@@ -253,12 +273,16 @@
 				3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */,
 				3EBC62B3271BEA8F009646E0 /* CastCell.swift in Sources */,
 				3EE9A86D27193CD900EFAF97 /* SearchViewController.swift in Sources */,
+				3E725023271E883F00F23AEA /* OverviewCell.swift in Sources */,
 				3EE9A86627193C6700EFAF97 /* TrendViewController.swift in Sources */,
 				3EE9A83B2719397A00EFAF97 /* ViewController.swift in Sources */,
+				3E725027271E8B8700F23AEA /* BookCell.swift in Sources */,
 				3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */,
 				3EE9A8372719397A00EFAF97 /* AppDelegate.swift in Sources */,
 				3EE9A86A27193CB900EFAF97 /* CastViewController.swift in Sources */,
+				3E72502B271E8CF700F23AEA /* BookViewController.swift in Sources */,
 				3EBC62F0271D6645009646E0 /* WebViewController.swift in Sources */,
+				3E725043271ED1EB00F23AEA /* UIColor+Extensions.swift in Sources */,
 				3EE9A8392719397A00EFAF97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,6 +43,9 @@
                                                 <state key="normal" title="BOOK">
                                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="bookButtonClicked:" destination="efg-Vw-qt2" eventType="touchUpInside" id="Riz-Tj-MZ2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -108,6 +111,15 @@
                                     <navigationItem title="Title" id="WaL-zd-HUg"/>
                                 </items>
                             </navigationBar>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-x4-Sew">
+                                <rect key="frame" x="108" y="262" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJg-31-HIy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
