@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vjE-TW-ukf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Box Office Detail View Controller-->
+        <scene sceneID="unM-8f-wO8">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficeDetailViewController" id="vjE-TW-ukf" customClass="BoxOfficeDetailViewController" customModule="SeSAC_03week" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOa-DP-raS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kg3-Ph-XEh">
+                                <rect key="frame" x="50" y="220" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NqK-g7-CMw">
+                                <rect key="frame" x="50" y="274" width="314" height="358"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CNu-FP-DVI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NqK-g7-CMw" firstAttribute="height" secondItem="eOa-DP-raS" secondAttribute="height" multiplier="0.4" id="ARZ-Z7-Eoz"/>
+                            <constraint firstItem="NqK-g7-CMw" firstAttribute="top" secondItem="Kg3-Ph-XEh" secondAttribute="bottom" constant="20" id="BRY-PU-ysW"/>
+                            <constraint firstItem="NqK-g7-CMw" firstAttribute="centerX" secondItem="CNu-FP-DVI" secondAttribute="centerX" id="U8K-8D-EaW"/>
+                            <constraint firstItem="Kg3-Ph-XEh" firstAttribute="width" secondItem="NqK-g7-CMw" secondAttribute="width" id="XGy-AG-AcO"/>
+                            <constraint firstItem="Kg3-Ph-XEh" firstAttribute="centerX" secondItem="CNu-FP-DVI" secondAttribute="centerX" id="cbj-yB-coI"/>
+                            <constraint firstItem="NqK-g7-CMw" firstAttribute="width" secondItem="eOa-DP-raS" secondAttribute="width" multiplier="0.758454" id="d4q-Ar-oI6"/>
+                            <constraint firstItem="NqK-g7-CMw" firstAttribute="centerY" secondItem="CNu-FP-DVI" secondAttribute="centerY" id="qOn-4R-re3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="overviewTextView" destination="NqK-g7-CMw" id="f5k-46-Nyh"/>
+                        <outlet property="titleTextField" destination="Kg3-Ph-XEh" id="tHs-bP-RdY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViH-Vl-QOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2722" y="440"/>
+        </scene>
+        <!--Box Office Cast View Controller-->
+        <scene sceneID="I2a-yC-A7Q">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficeCastViewController" id="Gfh-R4-lBB" customClass="BoxOfficeCastViewController" customModule="SeSAC_03week" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFk-53-0mk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qUX-Ya-OOm">
+                                <rect key="frame" x="44" y="188" width="326" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="castCell" textLabel="eAb-8d-FA1" style="IBUITableViewCellStyleDefault" id="3lH-4L-z2n">
+                                        <rect key="frame" x="0.0" y="28" width="326" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lH-4L-z2n" id="skJ-5u-U0k">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eAb-8d-FA1">
+                                                    <rect key="frame" x="20" y="0.0" width="286" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NIC-aF-Ve1"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="qUX-Ya-OOm" firstAttribute="top" secondItem="NIC-aF-Ve1" secondAttribute="top" constant="144" id="7Vy-km-qKp"/>
+                            <constraint firstItem="NIC-aF-Ve1" firstAttribute="trailing" secondItem="qUX-Ya-OOm" secondAttribute="trailing" constant="44" id="ScH-hP-zlI"/>
+                            <constraint firstItem="qUX-Ya-OOm" firstAttribute="leading" secondItem="NIC-aF-Ve1" secondAttribute="leading" constant="44" id="Zeu-RA-LWz"/>
+                            <constraint firstItem="NIC-aF-Ve1" firstAttribute="bottom" secondItem="qUX-Ya-OOm" secondAttribute="bottom" constant="76" id="m5B-KV-CF1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="castTableView" destination="qUX-Ya-OOm" id="pAp-sp-0R1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPW-fK-w0U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1694" y="440"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
