@@ -78,9 +78,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="TREND MEDIA" id="5te-xa-m35">
                         <barButtonItem key="backBarButtonItem" title="뒤로" id="cbw-3N-aAA"/>
-                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" id="2U8-hI-zwS">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem image="list.dash" catalog="system" id="2U8-hI-zwS">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="mappin.and.ellipse" catalog="system" id="5Hz-Iv-2eo">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="pinButtonClicked:" destination="efg-Vw-qt2" id="QeR-dg-Fjt"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" image="magnifyingglass" catalog="system" id="HMc-cp-Jqn">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -111,15 +119,6 @@
                                     <navigationItem title="Title" id="WaL-zd-HUg"/>
                                 </items>
                             </navigationBar>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-x4-Sew">
-                                <rect key="frame" x="108" y="262" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJg-31-HIy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,6 +158,7 @@
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

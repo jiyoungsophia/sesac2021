@@ -49,6 +49,13 @@ class TrendViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func pinButtonClicked(_ sender: UIBarButtonItem) {
+        let sb = UIStoryboard(name: "Theater", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "TheaterViewController") as! TheaterViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
     
     

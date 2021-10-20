@@ -15,6 +15,7 @@ func setViewShadow() {
         self.layer.shadowOpacity = 0.2
         self.layer.shadowOffset = .zero
         self.layer.shadowRadius = 10
+//        self.clipsToBounds = true
     }
     
     func setViewCornerRadius() {

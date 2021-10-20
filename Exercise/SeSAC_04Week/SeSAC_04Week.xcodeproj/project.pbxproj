@@ -14,6 +14,7 @@
 		3E72503C271EB5F000F23AEA /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E72503A271EB5F000F23AEA /* TagCollectionViewCell.xib */; };
 		3E725040271EC3B600F23AEA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E72503F271EC3B500F23AEA /* WebViewController.swift */; };
 		3E725047271EE6C500F23AEA /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 3E725046271EE6C500F23AEA /* Toast */; };
+		3E725051271FAC8900F23AEA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E725050271FAC8900F23AEA /* LocationViewController.swift */; };
 		3EBC62C6271CF763009646E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC62C5271CF763009646E0 /* AppDelegate.swift */; };
 		3EBC62C8271CF763009646E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC62C7271CF763009646E0 /* SceneDelegate.swift */; };
 		3EBC62CA271CF763009646E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC62C9271CF763009646E0 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		3E725039271EB5F000F23AEA /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E72503A271EB5F000F23AEA /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E72503F271EC3B500F23AEA /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		3E725050271FAC8900F23AEA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		3EBC62C2271CF763009646E0 /* SeSAC_04Week.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC_04Week.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EBC62C5271CF763009646E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EBC62C7271CF763009646E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				3EBC62C7271CF763009646E0 /* SceneDelegate.swift */,
 				3EBC62C9271CF763009646E0 /* ViewController.swift */,
 				3EBC62CB271CF763009646E0 /* Main.storyboard */,
+				3E725050271FAC8900F23AEA /* LocationViewController.swift */,
 				3E72503F271EC3B500F23AEA /* WebViewController.swift */,
 				3E725039271EB5F000F23AEA /* TagCollectionViewCell.swift */,
 				3E72503A271EB5F000F23AEA /* TagCollectionViewCell.xib */,
@@ -184,6 +187,7 @@
 				3E72503B271EB5F000F23AEA /* TagCollectionViewCell.swift in Sources */,
 				3EBC62CA271CF763009646E0 /* ViewController.swift in Sources */,
 				3E72502E271EAEF100F23AEA /* MainCollectionViewController.swift in Sources */,
+				3E725051271FAC8900F23AEA /* LocationViewController.swift in Sources */,
 				3EBC62C6271CF763009646E0 /* AppDelegate.swift in Sources */,
 				3EBC62C8271CF763009646E0 /* SceneDelegate.swift in Sources */,
 				3EBC62DE271CFAD5009646E0 /* SettingViewController.swift in Sources */,

@@ -39,6 +39,8 @@ class CastViewController: UIViewController {
 
         castTableView.delegate = self
         castTableView.dataSource = self
+//        castTableView.rowHeigt = UITableView.automaticDimension
+//        : heigtForRowAt이 우선 순위 더 높음
         
         setData()
     }
@@ -52,10 +54,9 @@ class CastViewController: UIViewController {
         
     }
     
-    @objc func overviewButtonClicked(selectButton: UIButton) {
+    @objc func overviewButtonClicked() {
         isClicked = !isClicked
         castTableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .none)
-     
     }
 }
 
@@ -86,9 +87,8 @@ extension CastViewController: UITableViewDelegate, UITableViewDataSource {
             let image = isClicked ? UIImage(systemName: "chevron.up") : UIImage(systemName: "chevron.down")
             cell.overviewButton.setImage(image, for: .normal)
             cell.overviewLabel.numberOfLines = isClicked ? 0 : 2
-            cell.overviewButton.addTarget(self, action: #selector(overviewButtonClicked(selectButton:)), for: .touchUpInside)
+            cell.overviewButton.addTarget(self, action: #selector(overviewButtonClicked), for: .touchUpInside)
         
-            
             return cell
         
         } else if indexPath.section == 1 {
@@ -114,7 +114,6 @@ extension CastViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 0
         }
-        
     }
     
     

@@ -60,12 +60,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 func titleToImagetitle(_ titleString: String) -> String {
     var imgString = titleString.lowercased()
-    imgString = imgString.replacingOccurrences(of: " ", with: "_")
-    imgString = imgString.replacingOccurrences(of: "-", with: "_")
-    imgString = imgString.replacingOccurrences(of: "&", with: "")
-    imgString = imgString.replacingOccurrences(of: ":", with: "")
-    imgString = imgString.replacingOccurrences(of: "'", with: "")
-    imgString = imgString.replacingOccurrences(of: "__", with: "_")
+    imgString = imgString.replacingOccurrences(of: " ", with: "_").replacingOccurrences(of: "-", with: "_").replacingOccurrences(of: "&", with: "").replacingOccurrences(of: ":", with: "").replacingOccurrences(of: "'", with: "").replacingOccurrences(of: "__", with: "_").lowercased()
     
     return imgString
 }

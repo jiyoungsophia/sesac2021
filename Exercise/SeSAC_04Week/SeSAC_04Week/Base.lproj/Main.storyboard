@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rgG-Qv-Nqg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Hu-LX-LNr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -157,7 +157,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OkQ-NN-y1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594.202898550725" y="183.48214285714286"/>
+            <point key="canvasLocation" x="2012" y="66"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="mXT-PJ-bvc">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" id="3Hu-LX-LNr" customClass="LocationViewController" customModule="SeSAC_04Week" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yrA-D0-ORW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBD-3N-dyF">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mHD-Vm-98f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-fe-zzc">
+                                <rect key="frame" x="0.0" y="164" width="414" height="698"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fwh-4V-ZTb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fwh-4V-ZTb" firstAttribute="trailing" secondItem="cBD-3N-dyF" secondAttribute="trailing" constant="20" id="0cy-x5-e8X"/>
+                            <constraint firstItem="Uhq-fe-zzc" firstAttribute="leading" secondItem="Fwh-4V-ZTb" secondAttribute="leading" id="1gO-nz-Pix"/>
+                            <constraint firstItem="cBD-3N-dyF" firstAttribute="leading" secondItem="Fwh-4V-ZTb" secondAttribute="leading" constant="20" id="9FG-dI-hwJ"/>
+                            <constraint firstItem="Fwh-4V-ZTb" firstAttribute="bottom" secondItem="Uhq-fe-zzc" secondAttribute="bottom" id="dcf-Z2-fLY"/>
+                            <constraint firstItem="cBD-3N-dyF" firstAttribute="top" secondItem="Fwh-4V-ZTb" secondAttribute="top" constant="20" id="jcg-Ua-G84"/>
+                            <constraint firstItem="Uhq-fe-zzc" firstAttribute="top" secondItem="cBD-3N-dyF" secondAttribute="bottom" id="r4X-WF-Lld"/>
+                            <constraint firstItem="Fwh-4V-ZTb" firstAttribute="trailing" secondItem="Uhq-fe-zzc" secondAttribute="trailing" id="tig-PF-K8i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLocationLabel" destination="cBD-3N-dyF" id="GYZ-7k-d9Y"/>
+                        <outlet property="mapView" destination="Uhq-fe-zzc" id="EnJ-w5-Xiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bQ4-28-IK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3134.7826086956525" y="65.625"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Uev-tO-hEg">
