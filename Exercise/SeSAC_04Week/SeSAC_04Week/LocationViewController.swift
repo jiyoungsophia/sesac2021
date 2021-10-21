@@ -51,9 +51,43 @@ class LocationViewController: UIViewController {
         locationManager.delegate = self
         
         
+        // 1021
+        currentLocationLabel.backgroundColor = .systemGreen
+        currentLocationLabel.alpha = 0
+        // closure
+        UIView.animate(withDuration: 5) {
+            self.currentLocationLabel.alpha = 1
+        }
+        
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    @IBAction func alertButtonClicked(_ sender: UIButton) {
+        showAlert(title: "설정", message: "설정에서 권한을 허용해주세요", okTitle: "설정으로 이동") {
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url) { success in
+                    print("잘열림 \(success)")
+                }
+            }
+        }
+    }
+    
+    @IBAction func alertLabelText(_ sender: UIButton) {
+        showAlert(title: "텍스트 변경", message: "레이블 글자 바꿉니다", okTitle: "바꾸기") {
+            self.currentLocationLabel.text = "dksdklsk"
+           
+        }
+    }
 }
 
 extension LocationViewController: MKMapViewDelegate {

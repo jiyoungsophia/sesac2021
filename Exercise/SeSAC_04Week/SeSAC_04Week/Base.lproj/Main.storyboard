@@ -179,6 +179,22 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-fe-zzc">
                                 <rect key="frame" x="0.0" y="164" width="414" height="698"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nc0-cm-l2c">
+                                <rect key="frame" x="269" y="78" width="106" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="설정"/>
+                                <connections>
+                                    <action selector="alertButtonClicked:" destination="3Hu-LX-LNr" eventType="touchUpInside" id="iuf-xd-oi1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4V-q4-55B">
+                                <rect key="frame" x="154" y="77" width="106" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="레이블변경"/>
+                                <connections>
+                                    <action selector="alertLabelText:" destination="3Hu-LX-LNr" eventType="touchUpInside" id="Ftj-aa-0SC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fwh-4V-ZTb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
