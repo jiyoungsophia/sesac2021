@@ -90,9 +90,17 @@
 
 > [🌱 16th Session - 211020](./TIL/day16-211020.md) (update later)
 
-
+* `Authorization Status`, `MapKit`
 
 <br>
+
+> [🌱 17th Session - 211021](./TIL/day17-211021.md) 
+
+* `First Class Object`, `Closure`
+
+<br>
+
+
 
 </details>
 
