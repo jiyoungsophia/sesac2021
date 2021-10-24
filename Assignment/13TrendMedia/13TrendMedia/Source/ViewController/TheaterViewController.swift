@@ -61,20 +61,22 @@ class TheaterViewController: UIViewController {
 
     // 기본 중심 위치 설정
     func setLocation() {
-        annotationList.removeAll()
-        let annotations = mapView.annotations
-        mapView.removeAnnotations(annotations)
+//        annotationList.removeAll()
+//        let annotations = mapView.annotations
+//        mapView.removeAnnotations(annotations)
+//
+//        let location = CLLocationCoordinate2D(latitude: 37.566651568191766, longitude: 126.97770011905223)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+//        let region = MKCoordinateRegion(center: location, span: span)
+//        mapView.setRegion(region, animated: true)
+//
+//        // 핀 설정
+//        let annotation = MKPointAnnotation()
+//        annotation.title = "서울시청"
+//        annotation.coordinate = location
+//        mapView.addAnnotation(annotation)
         
-        let location = CLLocationCoordinate2D(latitude: 37.566651568191766, longitude: 126.97770011905223)
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: location, span: span)
-        mapView.setRegion(region, animated: true)
-        
-        // 핀 설정
-        let annotation = MKPointAnnotation()
-        annotation.title = "서울시청"
-        annotation.coordinate = location
-        mapView.addAnnotation(annotation)
+        self.showTheater("전체")
         
         locationManager.delegate = self
     }
@@ -101,7 +103,7 @@ class TheaterViewController: UIViewController {
         
         // 전체는 잘 안보임,, 어떠케 해야댈지 모르겟슴,,
         let newLocation = CLLocationCoordinate2D(latitude: (regionLat / count), longitude: (regionLong / count))
-        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: newLocation, span: span)
         mapView.setRegion(region, animated: true)
     }
@@ -180,7 +182,17 @@ extension TheaterViewController: CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization() // 앱을 사용하는 동안에 대한 위치 권한 요청
             locationManager.startUpdatingLocation() // 위치 접근 시작 -> didUpdateLocation 실행
         case .restricted, .denied:
-            print("DENIED. GO TO SETTING")
+            showAlert(title: "설정", message: "설정에서 권한을 허용해주세요", okTitle: "설정으로 이동") {
+                guard let url = URL(string: UIApplication.openSettingsURLString) else {
+                    return
+                }
+                
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url) { success in
+                        print("잘열림 \(success)")
+                    }
+                }
+            }
         case .authorizedWhenInUse:
             locationManager.startUpdatingLocation() // 위치 접근 시작
         case .authorizedAlways:

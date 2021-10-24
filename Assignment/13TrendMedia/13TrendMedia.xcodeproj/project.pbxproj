@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E40821A2725417C00E25A99 /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082192725417C00E25A99 /* Alert+Extensions.swift */; };
 		3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1320271AC80F006F3E79 /* TrendCell.swift */; };
 		3E4D1323271AC80F006F3E79 /* TrendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D1321271AC80F006F3E79 /* TrendCell.xib */; };
 		3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E4082192725417C00E25A99 /* Alert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extensions.swift"; sourceTree = "<group>"; };
 		3E4D1320271AC80F006F3E79 /* TrendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCell.swift; sourceTree = "<group>"; };
 		3E4D1321271AC80F006F3E79 /* TrendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendCell.xib; sourceTree = "<group>"; };
 		3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */,
 				3E725042271ED1EB00F23AEA /* UIColor+Extensions.swift */,
+				3E4082192725417C00E25A99 /* Alert+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				3EBC62B7271BEE9A009646E0 /* SearchCell.swift in Sources */,
 				3EE9A87027193DF700EFAF97 /* TvShow.swift in Sources */,
 				3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */,
+				3E40821A2725417C00E25A99 /* Alert+Extensions.swift in Sources */,
 				3EBC62B3271BEA8F009646E0 /* CastCell.swift in Sources */,
 				3EE9A86D27193CD900EFAF97 /* SearchViewController.swift in Sources */,
 				3E725023271E883F00F23AEA /* OverviewCell.swift in Sources */,
