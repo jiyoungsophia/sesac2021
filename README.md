@@ -100,7 +100,11 @@
 
 <br>
 
+> [🌱 19th Session - 211025](./TIL/day17-211025.md) 
 
+* `HTTP 특징`, `Status Code`, `API Key`
+
+<br>
 
 </details>
 
