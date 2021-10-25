@@ -3,6 +3,8 @@
 *.DS_Store
 **/.DS_store
 
+*.xcconfig
+
 # Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,cocoapods
 # Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,cocoapods
 
