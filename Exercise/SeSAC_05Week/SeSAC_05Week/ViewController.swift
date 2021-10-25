@@ -57,10 +57,6 @@ class ViewController: UIViewController {
     @IBAction func updateButton(_ sender: UIButton) {
         
     }
-    
-    
-    
-    
 }
 
 extension ViewController: CLLocationManagerDelegate {
