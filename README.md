@@ -100,9 +100,15 @@
 
 <br>
 
-> [🌱 19th Session - 211025](./TIL/day17-211025.md) 
+> [🌱 19th Session - 211025](./TIL/day19-211025.md) 
 
 * `HTTP 특징`, `Status Code`, `API Key`
+
+<br>
+
+> [🌱 20th Session - 211026](./TIL/day20-211026.md) 
+
+* `HTTP vs Socket`, `URL`, `REST API`, `Serialization`
 
 <br>
 
