@@ -16,6 +16,7 @@
 		3E4082962726E85100E25A99 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082952726E85100E25A99 /* LotteryViewController.swift */; };
 		3E40829A2726EE5100E25A99 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4082992726EE5100E25A99 /* Alamofire */; };
 		3E40829E2726EE7000E25A99 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3E40829D2726EE7000E25A99 /* SwiftyJSON */; };
+		3E4082C02728010700E25A99 /* LotteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082BF2728010700E25A99 /* LotteryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3E40828C2726E83600E25A99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E40828E2726E83600E25A99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E4082952726E85100E25A99 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
+		3E4082BF2728010700E25A99 /* LotteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				3E4082842726E83300E25A99 /* ViewController.swift */,
 				3E4082862726E83300E25A99 /* Main.storyboard */,
 				3E4082952726E85100E25A99 /* LotteryViewController.swift */,
+				3E4082BF2728010700E25A99 /* LotteryModel.swift */,
 				3E4082892726E83600E25A99 /* Assets.xcassets */,
 				3E40828B2726E83600E25A99 /* LaunchScreen.storyboard */,
 				3E40828E2726E83600E25A99 /* Info.plist */,
@@ -154,6 +157,7 @@
 			files = (
 				3E4082962726E85100E25A99 /* LotteryViewController.swift in Sources */,
 				3E4082852726E83300E25A99 /* ViewController.swift in Sources */,
+				3E4082C02728010700E25A99 /* LotteryModel.swift in Sources */,
 				3E4082812726E83300E25A99 /* AppDelegate.swift in Sources */,
 				3E4082832726E83300E25A99 /* SceneDelegate.swift in Sources */,
 			);

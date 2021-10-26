@@ -12,26 +12,64 @@ import SwiftyJSON
 class LotteryViewController: UIViewController {
 
     @IBOutlet weak var lotteryNoTextField: UITextField!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var no1Label: UILabel!
+    @IBOutlet weak var no2Label: UILabel!
+    @IBOutlet weak var no3Label: UILabel!
+    @IBOutlet weak var no4Label: UILabel!
+    @IBOutlet weak var no5Label: UILabel!
+    @IBOutlet weak var no6Label: UILabel!
+    @IBOutlet weak var bonusLabel: UILabel!
+    @IBOutlet weak var lottoNoLabel: UILabel!
+    
+    
+    
+    
     let pickerView = UIPickerView()
     
     let lotteryNoList = ["980", "981", "982", "983", "984", "985", "986"]
+    var lottoData: [LotteryModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setPickerView()
-        getLottery()
+        getLottery(986)
         
     }
     
-    func getLottery() {
-        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=986"
+    func getLottery(_ lottoNo: Int) {
+        let url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=\(lottoNo)"
         
         AF.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
+                
+                let lottoNo = json["drwNo"].intValue
+                let lottoDate = json["drwNoDate"].stringValue
+                let lottoNo1 = json["drwtNo1"].intValue
+                let lottoNo2 = json["drwtNo2"].intValue
+                let lottoNo3 = json["drwtNo3"].intValue
+                let lottoNo4 = json["drwtNo4"].intValue
+                let lottoNo5 = json["drwtNo5"].intValue
+                let lottoNo6 = json["drwtNo6"].intValue
+                let lottoBonus = json["bnusNo"].intValue
+                
+                self.dateLabel.text = lottoDate
+                self.no1Label.text = "\(lottoNo1)"
+                self.no2Label.text = "\(lottoNo2)"
+                self.no3Label.text = "\(lottoNo3)"
+                self.no4Label.text = "\(lottoNo4)"
+                self.no5Label.text = "\(lottoNo5)"
+                self.no6Label.text = "\(lottoNo6)"
+                self.bonusLabel.text = "\(lottoBonus)"
+                
+                self.lottoNoLabel.text = "\(lottoNo)회 당첨결과"
+                
+                
             case .failure(let error):
                 print(error)
             }
@@ -47,6 +85,13 @@ class LotteryViewController: UIViewController {
 
         lotteryNoTextField.inputView = pickerView
     }
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+        
+
+    }
+    
 }
 
 extension LotteryViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
@@ -64,7 +109,7 @@ extension LotteryViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPi
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         lotteryNoTextField.text = lotteryNoList[row]
-        
+        getLottery(Int(lotteryNoList[row]) ?? 986)
     }
     
 }

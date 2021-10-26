@@ -57,6 +57,12 @@ class TrendViewController: UIViewController {
         
     }
     
+    @IBAction func filmButtonClicked(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "BoxOfficeViewController") as! BoxOfficeViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
     
 }

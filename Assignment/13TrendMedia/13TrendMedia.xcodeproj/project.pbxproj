@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3E40821A2725417C00E25A99 /* Alert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082192725417C00E25A99 /* Alert+Extensions.swift */; };
+		3E4082A527279C8500E25A99 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4082A427279C8500E25A99 /* SwiftyJSON */; };
+		3E4082A927279CB500E25A99 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4082A827279CB500E25A99 /* Alamofire */; };
+		3E4082AC2727A7DD00E25A99 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082AB2727A7DD00E25A99 /* MovieModel.swift */; };
+		3E4082B32727C47C00E25A99 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3E4082B12727C47C00E25A99 /* Production.xcconfig */; };
+		3E4082B42727C47C00E25A99 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3E4082B22727C47C00E25A99 /* Debug.xcconfig */; };
+		3E4082B82727C53100E25A99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082B72727C53100E25A99 /* Constants.swift */; };
+		3E4082C32728078F00E25A99 /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082C22728078F00E25A99 /* BoxOfficeViewController.swift */; };
+		3E4082C727280AE500E25A99 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082C627280AE500E25A99 /* BoxOfficeTableViewCell.swift */; };
+		3E4082CA27280D8B00E25A99 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */; };
+		3E4082CD27281EE600E25A99 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082CC27281EE600E25A99 /* Date+Extensions.swift */; };
 		3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1320271AC80F006F3E79 /* TrendCell.swift */; };
 		3E4D1323271AC80F006F3E79 /* TrendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D1321271AC80F006F3E79 /* TrendCell.xib */; };
 		3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */; };
@@ -43,6 +53,14 @@
 
 /* Begin PBXFileReference section */
 		3E4082192725417C00E25A99 /* Alert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extensions.swift"; sourceTree = "<group>"; };
+		3E4082AB2727A7DD00E25A99 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		3E4082B12727C47C00E25A99 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = ../../../../../Exercise/SeSAC_05Week/SeSAC_05Week/Config/Production.xcconfig; sourceTree = "<group>"; };
+		3E4082B22727C47C00E25A99 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../../../../../Exercise/SeSAC_05Week/SeSAC_05Week/Config/Debug.xcconfig; sourceTree = "<group>"; };
+		3E4082B72727C53100E25A99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../../Exercise/SeSAC_05Week/SeSAC_05Week/Constants.swift; sourceTree = "<group>"; };
+		3E4082C22728078F00E25A99 /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoxOfficeViewController.swift; path = 13TrendMedia/Source/ViewController/BoxOfficeViewController.swift; sourceTree = SOURCE_ROOT; };
+		3E4082C627280AE500E25A99 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
+		3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
+		3E4082CC27281EE600E25A99 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		3E4D1320271AC80F006F3E79 /* TrendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCell.swift; sourceTree = "<group>"; };
 		3E4D1321271AC80F006F3E79 /* TrendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendCell.xib; sourceTree = "<group>"; };
 		3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -82,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4082A927279CB500E25A99 /* Alamofire in Frameworks */,
+				3E4082A527279C8500E25A99 /* SwiftyJSON in Frameworks */,
 				3EBC62E9271D4A85009646E0 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4082AE2727C3A500E25A99 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3E4082B22727C47C00E25A99 /* Debug.xcconfig */,
+				3E4082B12727C47C00E25A99 /* Production.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		3E4D131A271AC53A006F3E79 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +128,7 @@
 				3E725022271E883F00F23AEA /* OverviewCell.swift */,
 				3E725025271E8B8700F23AEA /* BookCell.swift */,
 				3E725026271E8B8700F23AEA /* BookCell.xib */,
+				3E4082C627280AE500E25A99 /* BoxOfficeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -109,6 +139,7 @@
 				3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */,
 				3E725042271ED1EB00F23AEA /* UIColor+Extensions.swift */,
 				3E4082192725417C00E25A99 /* Alert+Extensions.swift */,
+				3E4082CC27281EE600E25A99 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +147,9 @@
 		3EBEA35B271AB88800E18175 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				3E4082B72727C53100E25A99 /* Constants.swift */,
+				3EE9A8362719397A00EFAF97 /* AppDelegate.swift */,
+				3EE9A8382719397A00EFAF97 /* SceneDelegate.swift */,
 				3E4D1327271AD265006F3E79 /* Extensions */,
 				3E4D131A271AC53A006F3E79 /* Cells */,
 				3EBEA35F271ABC1A00E18175 /* Models */,
@@ -127,6 +161,7 @@
 		3EBEA35C271AB88F00E18175 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3E4082AE2727C3A500E25A99 /* Config */,
 				3EE9A83F2719397D00EFAF97 /* Assets.xcassets */,
 				3EBEA35D271ABAD000E18175 /* Storyboards */,
 			);
@@ -150,6 +185,7 @@
 		3EBEA35E271ABB2900E18175 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3E4082C22728078F00E25A99 /* BoxOfficeViewController.swift */,
 				3EE9A86C27193CD900EFAF97 /* SearchViewController.swift */,
 				3EE9A83A2719397A00EFAF97 /* ViewController.swift */,
 				3EE9A86927193CB900EFAF97 /* CastViewController.swift */,
@@ -168,6 +204,8 @@
 				3EE9A86F27193DF700EFAF97 /* TvShow.swift */,
 				3E725053272012D700F23AEA /* TheaterLocation.swift */,
 				3E725057272013DB00F23AEA /* TheaterLocationInfo.swift */,
+				3E4082AB2727A7DD00E25A99 /* MovieModel.swift */,
+				3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,11 +229,9 @@
 		3EE9A8352719397A00EFAF97 /* 13TrendMedia */ = {
 			isa = PBXGroup;
 			children = (
+				3EE9A8442719397D00EFAF97 /* Info.plist */,
 				3EBEA35C271AB88F00E18175 /* Resource */,
 				3EBEA35B271AB88800E18175 /* Source */,
-				3EE9A8362719397A00EFAF97 /* AppDelegate.swift */,
-				3EE9A8382719397A00EFAF97 /* SceneDelegate.swift */,
-				3EE9A8442719397D00EFAF97 /* Info.plist */,
 			);
 			path = 13TrendMedia;
 			sourceTree = "<group>";
@@ -218,6 +254,8 @@
 			name = 13TrendMedia;
 			packageProductDependencies = (
 				3EBC62E8271D4A85009646E0 /* Kingfisher */,
+				3E4082A427279C8500E25A99 /* SwiftyJSON */,
+				3E4082A827279CB500E25A99 /* Alamofire */,
 			);
 			productName = 13TrendMedia;
 			productReference = 3EE9A8332719397A00EFAF97 /* 13TrendMedia.app */;
@@ -248,6 +286,8 @@
 			mainGroup = 3EE9A82A2719397A00EFAF97;
 			packageReferences = (
 				3EBC62E7271D4A85009646E0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3E4082A327279C8500E25A99 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3E4082A727279CB400E25A99 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3EE9A8342719397A00EFAF97 /* Products */;
 			projectDirPath = "";
@@ -270,6 +310,8 @@
 				3EE9A8432719397D00EFAF97 /* LaunchScreen.storyboard in Resources */,
 				3EE9A8402719397D00EFAF97 /* Assets.xcassets in Resources */,
 				3E5D2A10272016C800304B28 /* Theater.storyboard in Resources */,
+				3E4082B32727C47C00E25A99 /* Production.xcconfig in Resources */,
+				3E4082B42727C47C00E25A99 /* Debug.xcconfig in Resources */,
 				3EE9A83E2719397A00EFAF97 /* Main.storyboard in Resources */,
 				3EE9A86327193C5300EFAF97 /* Cast.storyboard in Resources */,
 				3EE9A86027193C3D00EFAF97 /* Search.storyboard in Resources */,
@@ -283,24 +325,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E4082AC2727A7DD00E25A99 /* MovieModel.swift in Sources */,
 				3EE9A87327193EC000EFAF97 /* TvShowInfomation.swift in Sources */,
 				3EBC62B7271BEE9A009646E0 /* SearchCell.swift in Sources */,
 				3EE9A87027193DF700EFAF97 /* TvShow.swift in Sources */,
 				3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */,
 				3E40821A2725417C00E25A99 /* Alert+Extensions.swift in Sources */,
+				3E4082B82727C53100E25A99 /* Constants.swift in Sources */,
 				3EBC62B3271BEA8F009646E0 /* CastCell.swift in Sources */,
 				3EE9A86D27193CD900EFAF97 /* SearchViewController.swift in Sources */,
 				3E725023271E883F00F23AEA /* OverviewCell.swift in Sources */,
 				3EE9A86627193C6700EFAF97 /* TrendViewController.swift in Sources */,
+				3E4082CD27281EE600E25A99 /* Date+Extensions.swift in Sources */,
 				3EE9A83B2719397A00EFAF97 /* ViewController.swift in Sources */,
 				3E725027271E8B8700F23AEA /* BookCell.swift in Sources */,
 				3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */,
 				3EE9A8372719397A00EFAF97 /* AppDelegate.swift in Sources */,
+				3E4082CA27280D8B00E25A99 /* BoxOfficeModel.swift in Sources */,
 				3EE9A86A27193CB900EFAF97 /* CastViewController.swift in Sources */,
 				3E72502B271E8CF700F23AEA /* BookViewController.swift in Sources */,
 				3E725054272012D700F23AEA /* TheaterLocation.swift in Sources */,
 				3EBC62F0271D6645009646E0 /* WebViewController.swift in Sources */,
 				3E725043271ED1EB00F23AEA /* UIColor+Extensions.swift in Sources */,
+				3E4082C32728078F00E25A99 /* BoxOfficeViewController.swift in Sources */,
+				3E4082C727280AE500E25A99 /* BoxOfficeTableViewCell.swift in Sources */,
 				3EE9A8392719397A00EFAF97 /* SceneDelegate.swift in Sources */,
 				3E5D2A13272016E500304B28 /* TheaterViewController.swift in Sources */,
 				3E725058272013DB00F23AEA /* TheaterLocationInfo.swift in Sources */,
@@ -447,6 +495,7 @@
 		};
 		3EE9A8482719397D00EFAF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E4082B22727C47C00E25A99 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,6 +514,7 @@
 		};
 		3EE9A8492719397D00EFAF97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E4082B12727C47C00E25A99 /* Production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,6 +555,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3E4082A327279C8500E25A99 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+		3E4082A727279CB400E25A99 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
 		3EBC62E7271D4A85009646E0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -516,6 +582,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3E4082A427279C8500E25A99 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E4082A327279C8500E25A99 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		3E4082A827279CB500E25A99 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3E4082A727279CB400E25A99 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		3EBC62E8271D4A85009646E0 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3EBC62E7271D4A85009646E0 /* XCRemoteSwiftPackageReference "Kingfisher" */;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 import CoreLocation
 import Alamofire
 import SwiftyJSON
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 
     
     func getCurrentWeather() {
-        
+        //파라미터에 온도섭씨로 가져오는거 확인
         let url = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=\(Constants.openweatherKey)"
 
         AF.request(url, method: .get).validate().responseJSON { response in
@@ -40,6 +41,20 @@ class ViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)
                 print("JSON: \(json)")
+                
+                let currentTemp = json["main"]["temp"].doubleValue - 273.15
+                let currentHumidity = json["main"]["humidity"].intValue
+                let currentWind = json["wind"]["speed"]
+                let currentIcon = json["weather"][0]["icon"].stringValue
+                print("이미지아이콘: \(currentIcon)")
+                self.temperatureLabel.text = "지금은 \(Int(currentTemp))°C에요"
+                self.humidityLabel.text = "\(currentHumidity)% 만큼 습해요"
+                self.windLabel.text = "\(currentWind)m/s의 바람이 불어요"
+                
+                
+                let url = URL(string: "https://openweathermap.org/img/wn/\(currentIcon)@2x.png")
+                self.weatherImageView.kf.setImage(with: url)
+                
             case .failure(let error):
                 print(error)
             }
@@ -51,7 +66,7 @@ class ViewController: UIViewController {
         let format = DateFormatter()    // 인스턴스화
         format.dateFormat = "MM월 dd일 HH시 mm분"
         dateLabel.text = "\(format.string(from: date))"
-//        print(format.string(from: date))
+
     }
     
     @IBAction func updateButton(_ sender: UIButton) {

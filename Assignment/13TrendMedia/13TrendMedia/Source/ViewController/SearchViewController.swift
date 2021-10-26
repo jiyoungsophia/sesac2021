@@ -6,29 +6,85 @@
 //
 
 import UIKit
+import Kingfisher
+import Alamofire
+import SwiftyJSON
 
 class SearchViewController: UIViewController {
 
     var tvShowList = TvShowInfomation()
+    var movieData: [MovieModel] = []
+    
     
     @IBOutlet weak var searchTableView: UITableView!
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTableView.delegate = self
         searchTableView.dataSource = self
+        
+        fetchMovieData()
     }
+    
+    //네이버 영화 네트워크 통신
+    func fetchMovieData() {
+        if let query = "스파이더맨".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            let url = "https://openapi.naver.com/v1/search/movie.json?query=\(query)&display=15&start=1"
+            
+            let header: HTTPHeaders = ["X-Naver-Client-Id": "\(Constants.naverKey)",
+                                       "X-Naver-Client-Secret" : "\(Constants.naverSecretKey)"
+                                        ]
+            
+                    
+            
+            AF.request(url, method: .get, headers: header).validate().responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    
+                    for item in json["items"].arrayValue {
+                        let value = item["title"].stringValue.replacingOccurrences(of: "<b>", with: "").replacingOccurrences(of: "</b>", with: "")
+                        let image = item["image"].stringValue
+                        let link = item["link"].stringValue
+                        let userRating = item["userRating"].stringValue
+                        let sub = item["subtitle"].stringValue
+                        let pubDate = item["pubDate"].stringValue
+                        
+                        
+                        let data = MovieModel(titleData: value, imageData: image, linkData: link, userRatingData: userRating, subtitleData: sub, pubDateData: pubDate)
+                        
+                        self.movieData.append(data)
+    
+                    }
+                    
+//                    print(self.movieData)
+                    // 중요!!!
+                    self.searchTableView.reloadData()
+                    
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
+        
+        
+    }
+    
     
     @IBAction func closeButtonClicked(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tvShowList.tvShow.count
+        print(movieData.count, #function)
+        return movieData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -41,16 +97,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let row = tvShowList.tvShow[indexPath.row]
+        let row = movieData[indexPath.row]
         
-        cell.titleLabel.text = row.title
-        cell.releaseDateLabel.text = row.releaseDate
+        cell.titleLabel.text = row.titleData
         
-        let titleString = row.title
-        let imgTitle = titleToImagetitle(titleString)
-        cell.posterImageView.image = UIImage(named: imgTitle)
+        cell.releaseDateLabel.text = row.pubDateData
         
-        cell.overviewLabel.text = row.overview
+        cell.overviewLabel.text = row.linkData
+        
+        // kf: placeholder
+        let url = URL(string: row.imageData)
+        cell.posterImageView.kf.setImage(with: url)
+        
         
         return cell
     }
