@@ -19,6 +19,11 @@
 		3E4082722726E1F300E25A99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082712726E1F300E25A99 /* Constants.swift */; };
 		3E4082A12727928300E25A99 /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082A02727928300E25A99 /* TranslateViewController.swift */; };
 		3E4082BD2727E91200E25A99 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4082BC2727E91200E25A99 /* Kingfisher */; };
+		3E4082D02728D34A00E25A99 /* TranslateAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082CF2728D34A00E25A99 /* TranslateAPIManager.swift */; };
+		3E4082D32728E9B900E25A99 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082D22728E9B900E25A99 /* VisionViewController.swift */; };
+		3E4082D62728EC7000E25A99 /* VisionAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082D52728EC7000E25A99 /* VisionAPIManager.swift */; };
+		3E4082D92728F18D00E25A99 /* IMG_5086.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3E4082D82728F18D00E25A99 /* IMG_5086.JPG */; };
+		3E4082DC272990BF00E25A99 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082DB272990BF00E25A99 /* WeatherAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		3E40826E2726E0F900E25A99 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		3E4082712726E1F300E25A99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3E4082A02727928300E25A99 /* TranslateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		3E4082CF2728D34A00E25A99 /* TranslateAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateAPIManager.swift; sourceTree = "<group>"; };
+		3E4082D22728E9B900E25A99 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
+		3E4082D52728EC7000E25A99 /* VisionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPIManager.swift; sourceTree = "<group>"; };
+		3E4082D82728F18D00E25A99 /* IMG_5086.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_5086.JPG; path = ../../../../Downloads/IMG_5086.JPG; sourceTree = "<group>"; };
+		3E4082DB272990BF00E25A99 /* WeatherAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +84,14 @@
 				3E4082492726445000E25A99 /* AppDelegate.swift */,
 				3E40824B2726445000E25A99 /* SceneDelegate.swift */,
 				3E40824D2726445000E25A99 /* ViewController.swift */,
+				3E4082DB272990BF00E25A99 /* WeatherAPIManager.swift */,
 				3E4082662726DC8F00E25A99 /* Alert+Extensions.swift */,
+				3E4082D52728EC7000E25A99 /* VisionAPIManager.swift */,
 				3E40824F2726445000E25A99 /* Main.storyboard */,
+				3E4082D22728E9B900E25A99 /* VisionViewController.swift */,
+				3E4082D82728F18D00E25A99 /* IMG_5086.JPG */,
 				3E4082A02727928300E25A99 /* TranslateViewController.swift */,
+				3E4082CF2728D34A00E25A99 /* TranslateAPIManager.swift */,
 				3E4082522726445300E25A99 /* Assets.xcassets */,
 				3E4082542726445300E25A99 /* LaunchScreen.storyboard */,
 				3E4082572726445300E25A99 /* Info.plist */,
@@ -163,6 +178,7 @@
 			files = (
 				3E4082562726445300E25A99 /* LaunchScreen.storyboard in Resources */,
 				3E4082532726445300E25A99 /* Assets.xcassets in Resources */,
+				3E4082D92728F18D00E25A99 /* IMG_5086.JPG in Resources */,
 				3E4082512726445000E25A99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,8 +193,12 @@
 				3E4082722726E1F300E25A99 /* Constants.swift in Sources */,
 				3E4082672726DC8F00E25A99 /* Alert+Extensions.swift in Sources */,
 				3E40824E2726445000E25A99 /* ViewController.swift in Sources */,
+				3E4082DC272990BF00E25A99 /* WeatherAPIManager.swift in Sources */,
 				3E40824A2726445000E25A99 /* AppDelegate.swift in Sources */,
+				3E4082D32728E9B900E25A99 /* VisionViewController.swift in Sources */,
+				3E4082D62728EC7000E25A99 /* VisionAPIManager.swift in Sources */,
 				3E40824C2726445000E25A99 /* SceneDelegate.swift in Sources */,
+				3E4082D02728D34A00E25A99 /* TranslateAPIManager.swift in Sources */,
 				3E4082A12727928300E25A99 /* TranslateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

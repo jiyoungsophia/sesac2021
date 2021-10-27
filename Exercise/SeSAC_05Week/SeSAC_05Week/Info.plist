@@ -21,8 +21,8 @@ NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
 	<string>$(NAVER_API_KEY)</string>
 	<key>OPENWEATHER_API_KEY</key>
 	<string>$(OPENWEATHER_API_KEY)</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
+	<key>KAKAO_API_KEY</key>
+	<string>$(KAKAO_API_KEY)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>현재 위치를 알기 위해 이 권한이 필요합니다</string>
 	<key>CFBundleExecutable</key>
