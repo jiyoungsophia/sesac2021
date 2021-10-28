@@ -25,10 +25,14 @@ struct Constants {
     static var kakaoKey: String {
         (Bundle.main.infoDictionary?["KAKAO_API_KEY"] as? String) ?? ""
     }
+    
+    static var tmdbKey: String {
+        (Bundle.main.infoDictionary?["TMDB_API_KEY"] as? String) ?? ""
+    }
 }
 
 struct Endpoint {
     static let translateURL = "https://openapi.naver.com/v1/papago/n2mt"
     static let visionURL = "https://dapi.kakao.com/v2/vision/face/detect"
-    
+    static let tmdbTvDayURL = "https://api.themoviedb.org/3/trending/tv/day"
 }
