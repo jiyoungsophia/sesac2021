@@ -25,6 +25,8 @@
 		3E4082D92728F18D00E25A99 /* IMG_5086.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3E4082D82728F18D00E25A99 /* IMG_5086.JPG */; };
 		3E4082DC272990BF00E25A99 /* WeatherAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082DB272990BF00E25A99 /* WeatherAPIManager.swift */; };
 		3E4082E9272A225000E25A99 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4082E8272A225000E25A99 /* JGProgressHUD */; };
+		3E4082EC272E4BD800E25A99 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082EB272E4BD700E25A99 /* AsyncViewController.swift */; };
+		3E4082EF272E663400E25A99 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082EE272E663300E25A99 /* UILabel+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		3E4082D52728EC7000E25A99 /* VisionAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAPIManager.swift; sourceTree = "<group>"; };
 		3E4082D82728F18D00E25A99 /* IMG_5086.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_5086.JPG; path = ../../../../Downloads/IMG_5086.JPG; sourceTree = "<group>"; };
 		3E4082DB272990BF00E25A99 /* WeatherAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIManager.swift; sourceTree = "<group>"; };
+		3E4082EB272E4BD700E25A99 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
+		3E4082EE272E663300E25A99 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		3E4082482726445000E25A99 /* SeSAC_05Week */ = {
 			isa = PBXGroup;
 			children = (
+				3E4082EE272E663300E25A99 /* UILabel+Extension.swift */,
 				3E40826C2726E0D600E25A99 /* Config */,
 				3E4082492726445000E25A99 /* AppDelegate.swift */,
 				3E40824B2726445000E25A99 /* SceneDelegate.swift */,
@@ -90,6 +95,7 @@
 				3E4082662726DC8F00E25A99 /* Alert+Extensions.swift */,
 				3E4082D52728EC7000E25A99 /* VisionAPIManager.swift */,
 				3E40824F2726445000E25A99 /* Main.storyboard */,
+				3E4082EB272E4BD700E25A99 /* AsyncViewController.swift */,
 				3E4082D22728E9B900E25A99 /* VisionViewController.swift */,
 				3E4082D82728F18D00E25A99 /* IMG_5086.JPG */,
 				3E4082A02727928300E25A99 /* TranslateViewController.swift */,
@@ -196,11 +202,13 @@
 			files = (
 				3E4082722726E1F300E25A99 /* Constants.swift in Sources */,
 				3E4082672726DC8F00E25A99 /* Alert+Extensions.swift in Sources */,
+				3E4082EC272E4BD800E25A99 /* AsyncViewController.swift in Sources */,
 				3E40824E2726445000E25A99 /* ViewController.swift in Sources */,
 				3E4082DC272990BF00E25A99 /* WeatherAPIManager.swift in Sources */,
 				3E40824A2726445000E25A99 /* AppDelegate.swift in Sources */,
 				3E4082D32728E9B900E25A99 /* VisionViewController.swift in Sources */,
 				3E4082D62728EC7000E25A99 /* VisionAPIManager.swift in Sources */,
+				3E4082EF272E663400E25A99 /* UILabel+Extension.swift in Sources */,
 				3E40824C2726445000E25A99 /* SceneDelegate.swift in Sources */,
 				3E4082D02728D34A00E25A99 /* TranslateAPIManager.swift in Sources */,
 				3E4082A12727928300E25A99 /* TranslateViewController.swift in Sources */,

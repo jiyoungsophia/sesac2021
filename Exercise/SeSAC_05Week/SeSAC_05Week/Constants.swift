@@ -35,4 +35,5 @@ struct Endpoint {
     static let translateURL = "https://openapi.naver.com/v1/papago/n2mt"
     static let visionURL = "https://dapi.kakao.com/v2/vision/face/detect"
     static let tmdbTvDayURL = "https://api.themoviedb.org/3/trending/tv/day"
+    static let tmdbImageURL = "https://image.tmdb.org/t/p/w500"
 }
