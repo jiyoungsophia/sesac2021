@@ -8,12 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    /*
+     ======> S-CoreDream-2ExtraLight
+     ======> S-CoreDream-5Medium
+     ======> S-CoreDream-9Black
+     */
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var backupRestoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        welcomeLabel.text = LocalizableStrings.welcome_text.localized
+        
+        welcomeLabel.font = UIFont().main // 11~20
+        
+        backupRestoreLabel.text = LocalizableStrings.data_backup.localizedSetting
     }
-
-
+    
+    
 }
 

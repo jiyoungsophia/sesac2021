@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+enum LocalizableStrings: String {
+    case welcome_text
+    case data_backup
+    
+    var localized: String {
+        return self.rawValue.localized() // Localizable.strings
+    }
+    
+    var localizedSetting: String {
+        return self.rawValue.localized(tableName: "Setting") // Setting.strings
+    }
+}
