@@ -112,6 +112,12 @@
 
 <br>
 
+> [🌱 24th Session - 211101](./TIL/day24-211101.md) 
+
+* `Custom Font`, `Internationalization&Localization`
+
+<br>
+
 </details>
 
 
