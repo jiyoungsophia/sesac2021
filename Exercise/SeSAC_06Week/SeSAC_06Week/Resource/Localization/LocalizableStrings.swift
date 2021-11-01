@@ -10,6 +10,8 @@ import Foundation
 enum LocalizableStrings: String {
     case welcome_text
     case data_backup
+    case writing_diary
+    case save_button
     
     var localized: String {
         return self.rawValue.localized() // Localizable.strings

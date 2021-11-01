@@ -8,11 +8,13 @@
 import UIKit
 
 class AddViewController: UIViewController {
-
+    @IBOutlet weak var addTitle: UITextField!
+    @IBOutlet weak var addTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setNavUI()
+        setUI()
          
     }
     
@@ -21,11 +23,14 @@ class AddViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func setNavUI() {
-        navigationItem.title = "일기 작성"
+    func setUI() {
+        navigationItem.title = LocalizableStrings.writing_diary.localized
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonClicked))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: #selector(closeButtonClicked))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizableStrings.save_button.localized, style: .plain, target: self, action: #selector(closeButtonClicked))
         self.navigationController?.navigationBar.isTranslucent = false
+        
+        addTitle.font = UIFont().diary
+        addTextView.font = UIFont().diary
     }
 
 }

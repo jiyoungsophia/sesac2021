@@ -12,4 +12,7 @@ extension UIFont {
         return UIFont(name: "S-CoreDream-9Black", size: 14)!
     }
     
+    var diary: UIFont {
+        return UIFont(name: "KyoboHandwriting2019", size: 14)!
+    }
 }

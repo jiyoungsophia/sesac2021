@@ -20,6 +20,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for family in UIFont.familyNames {
+            print(family)
+            
+            for sub in UIFont.fontNames(forFamilyName: family) {
+                print("======> \(sub)")
+            }
+        }
+        
         welcomeLabel.text = LocalizableStrings.welcome_text.localized
         
         welcomeLabel.font = UIFont().main // 11~20

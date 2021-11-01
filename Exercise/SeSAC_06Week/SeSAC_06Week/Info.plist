@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Kyobo Handwriting 2019.otf</string>
 		<string>SCDream2.otf</string>
 		<string>SCDream5.otf</string>
 		<string>SCDream9.otf</string>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="YbU-jd-PJX">
+            <objects>
+                <viewController storyboardIdentifier="AddViewController" id="wE1-41-8dI" customClass="AddViewController" customModule="SeSAC_06Week" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3U3-b7-ZyN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_5106.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-Ju-WWm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kk9-Ju-WWm" secondAttribute="height" multiplier="1:1" id="eFL-5r-UAG"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="제목을 입력해주세요" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDc-73-pvh">
+                                <rect key="frame" x="20" y="478" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9fY-Db-4tK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59v-HA-eM5">
+                                <rect key="frame" x="20" y="542" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="z3R-2v-R8d"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lWO-Wa-pR7">
+                                <rect key="frame" x="20" y="606" width="374" height="212"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wi4-wd-bkP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="59v-HA-eM5" firstAttribute="top" secondItem="nDc-73-pvh" secondAttribute="bottom" constant="20" id="2QQ-K4-sSn"/>
+                            <constraint firstItem="Wi4-wd-bkP" firstAttribute="trailing" secondItem="59v-HA-eM5" secondAttribute="trailing" constant="20" id="5Jf-Q2-lMD"/>
+                            <constraint firstItem="lWO-Wa-pR7" firstAttribute="leading" secondItem="Wi4-wd-bkP" secondAttribute="leading" constant="20" id="GN3-Ek-Fut"/>
+                            <constraint firstItem="Kk9-Ju-WWm" firstAttribute="leading" secondItem="Wi4-wd-bkP" secondAttribute="leading" id="T2g-bi-fnp"/>
+                            <constraint firstItem="nDc-73-pvh" firstAttribute="leading" secondItem="Wi4-wd-bkP" secondAttribute="leading" constant="20" id="dtJ-lY-Z26"/>
+                            <constraint firstItem="Kk9-Ju-WWm" firstAttribute="top" secondItem="Wi4-wd-bkP" secondAttribute="top" id="fkL-91-98w"/>
+                            <constraint firstItem="Wi4-wd-bkP" firstAttribute="trailing" secondItem="nDc-73-pvh" secondAttribute="trailing" constant="20" id="ggy-lB-bDy"/>
+                            <constraint firstItem="Wi4-wd-bkP" firstAttribute="trailing" secondItem="lWO-Wa-pR7" secondAttribute="trailing" constant="20" id="kUH-6H-EKf"/>
+                            <constraint firstItem="59v-HA-eM5" firstAttribute="leading" secondItem="Wi4-wd-bkP" secondAttribute="leading" constant="20" id="kbO-vN-7Wu"/>
+                            <constraint firstItem="Wi4-wd-bkP" firstAttribute="bottom" secondItem="lWO-Wa-pR7" secondAttribute="bottom" constant="44" id="lvn-zz-1nj"/>
+                            <constraint firstItem="Wi4-wd-bkP" firstAttribute="trailing" secondItem="Kk9-Ju-WWm" secondAttribute="trailing" id="n52-8z-qt3"/>
+                            <constraint firstItem="lWO-Wa-pR7" firstAttribute="top" secondItem="59v-HA-eM5" secondAttribute="bottom" constant="20" id="oLA-z7-6rL"/>
+                            <constraint firstItem="nDc-73-pvh" firstAttribute="top" secondItem="Kk9-Ju-WWm" secondAttribute="bottom" constant="20" id="xFL-iO-sEX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addTextView" destination="lWO-Wa-pR7" id="B4j-WD-vxw"/>
+                        <outlet property="addTitle" destination="nDc-73-pvh" id="ryO-ah-Pdc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee2-ws-dcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_5106.JPG" width="1080" height="1272"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
