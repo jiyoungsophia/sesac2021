@@ -16,12 +16,46 @@ class TrendViewController: UIViewController {
     @IBOutlet weak var trendTableView: UITableView!
     
     var tvShowList = TvShowInfomation()
+    var tvData: [TrendModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getTrendData()
         setTableView()
         buttonBackView.setViewShadow()
         navigationItem.backBarButtonItem?.tintColor = .black
+    }
+    
+    func getTrendData() {
+        TrendAPIService.shared.fetchTrendData { (code, json) in
+            switch code {
+            case 200:
+                print(json)
+                
+                for result in json["results"].arrayValue {
+                    // TODO: - 장르 수정
+                    let genreId = result["genre_ids"][0].stringValue
+                    let enTitle = result["name"].stringValue
+                    let title = result["original_name"].stringValue
+                    let image = result["backdrop_path"].stringValue
+                    let rateInput = result["vote_average"].doubleValue
+                    let rate = "\(round(rateInput * 10) / 10)"
+                    let release = result["first_air_date"].stringValue
+                    
+                    let data = TrendModel(genreIDData: genreId, enTitleData: enTitle, posterImageData: image, rateData: rate, koTitleData: title, releaseData: release)
+                     
+                    self.tvData.append(data)
+                }
+                self.trendTableView.reloadData()
+                
+                
+            case 400:
+                print(json)
+        
+            default:
+                print("오류")
+            }
+        }
     }
     
     func setTableView() {
@@ -63,15 +97,13 @@ class TrendViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-    
-    
 }
 
 
 extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return tvShowList.tvShow.count
+        return tvData.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,17 +116,17 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let row = tvShowList.tvShow[indexPath.row]
+        let row = tvData[indexPath.row]
         
-        cell.genreLabel.text = "#\(row.genre)"
-        cell.enTitleLabel.text = row.title
+        cell.genreLabel.text = row.genreIDData
+        cell.enTitleLabel.text = row.enTitleData
         
-        let url = URL(string: row.backdropImage)
+        let url = URL(string: "https://image.tmdb.org/t/p/w500/\(row.posterImageData)")
         cell.posterImageView.kf.setImage(with: url)
         
-        cell.rateLabel.text = "\(row.rate)"
-        cell.koTitleLabel.text = row.title
-        cell.releaseDateLabel.text = row.releaseDate
+        cell.rateLabel.text = row.rateData
+        cell.koTitleLabel.text = row.koTitleData
+        cell.releaseDateLabel.text = row.releaseData
         
         cell.cellDelegate = self
         cell.cellIndexPath = indexPath.row
@@ -111,15 +143,17 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
+    
+    // TODO: - pagenation
+    
 }
 
 extension TrendViewController: LinkButtonCellDelegate {
     func linkButtonClicked(indexPathRow: Int) {
         let vc = self.storyboard?.instantiateViewController(identifier: "WebViewController") as! WebViewController
         
-        vc.titleData = tvShowList.tvShow[indexPathRow].title
-        self.present(vc, animated: true, completion: nil)
+        vc.titleData = tvData[indexPathRow].enTitleData
         
- 
+        self.present(vc, animated: true, completion: nil)
     }
 }

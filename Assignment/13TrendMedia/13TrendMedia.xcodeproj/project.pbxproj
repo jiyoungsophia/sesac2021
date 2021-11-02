@@ -18,6 +18,8 @@
 		3E4082C727280AE500E25A99 /* BoxOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082C627280AE500E25A99 /* BoxOfficeTableViewCell.swift */; };
 		3E4082CA27280D8B00E25A99 /* BoxOfficeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */; };
 		3E4082CD27281EE600E25A99 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082CC27281EE600E25A99 /* Date+Extensions.swift */; };
+		3E4082E0272996B700E25A99 /* TrendAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082DF272996B700E25A99 /* TrendAPIService.swift */; };
+		3E4082E52729A17800E25A99 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4082E42729A17800E25A99 /* TrendModel.swift */; };
 		3E4D1322271AC80F006F3E79 /* TrendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1320271AC80F006F3E79 /* TrendCell.swift */; };
 		3E4D1323271AC80F006F3E79 /* TrendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D1321271AC80F006F3E79 /* TrendCell.xib */; };
 		3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */; };
@@ -61,6 +63,8 @@
 		3E4082C627280AE500E25A99 /* BoxOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeTableViewCell.swift; sourceTree = "<group>"; };
 		3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeModel.swift; sourceTree = "<group>"; };
 		3E4082CC27281EE600E25A99 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		3E4082DF272996B700E25A99 /* TrendAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendAPIService.swift; sourceTree = "<group>"; };
+		3E4082E42729A17800E25A99 /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
 		3E4D1320271AC80F006F3E79 /* TrendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendCell.swift; sourceTree = "<group>"; };
 		3E4D1321271AC80F006F3E79 /* TrendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendCell.xib; sourceTree = "<group>"; };
 		3E4D1328271AD2B2006F3E79 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		3E4082DE2729969900E25A99 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				3E4082DF272996B700E25A99 /* TrendAPIService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
 		3E4D131A271AC53A006F3E79 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +165,7 @@
 				3E4D1327271AD265006F3E79 /* Extensions */,
 				3E4D131A271AC53A006F3E79 /* Cells */,
 				3EBEA35F271ABC1A00E18175 /* Models */,
+				3E4082DE2729969900E25A99 /* APIServices */,
 				3EBEA35E271ABB2900E18175 /* ViewController */,
 			);
 			path = Source;
@@ -206,6 +219,7 @@
 				3E725057272013DB00F23AEA /* TheaterLocationInfo.swift */,
 				3E4082AB2727A7DD00E25A99 /* MovieModel.swift */,
 				3E4082C927280D8B00E25A99 /* BoxOfficeModel.swift */,
+				3E4082E42729A17800E25A99 /* TrendModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +343,7 @@
 				3EE9A87327193EC000EFAF97 /* TvShowInfomation.swift in Sources */,
 				3EBC62B7271BEE9A009646E0 /* SearchCell.swift in Sources */,
 				3EE9A87027193DF700EFAF97 /* TvShow.swift in Sources */,
+				3E4082E0272996B700E25A99 /* TrendAPIService.swift in Sources */,
 				3E4D1329271AD2B2006F3E79 /* UIView+Extensions.swift in Sources */,
 				3E40821A2725417C00E25A99 /* Alert+Extensions.swift in Sources */,
 				3E4082B82727C53100E25A99 /* Constants.swift in Sources */,
@@ -345,6 +360,7 @@
 				3EE9A86A27193CB900EFAF97 /* CastViewController.swift in Sources */,
 				3E72502B271E8CF700F23AEA /* BookViewController.swift in Sources */,
 				3E725054272012D700F23AEA /* TheaterLocation.swift in Sources */,
+				3E4082E52729A17800E25A99 /* TrendModel.swift in Sources */,
 				3EBC62F0271D6645009646E0 /* WebViewController.swift in Sources */,
 				3E725043271ED1EB00F23AEA /* UIColor+Extensions.swift in Sources */,
 				3E4082C32728078F00E25A99 /* BoxOfficeViewController.swift in Sources */,

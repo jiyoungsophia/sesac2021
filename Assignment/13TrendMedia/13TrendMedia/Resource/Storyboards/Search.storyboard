@@ -20,7 +20,7 @@
                                 <rect key="frame" x="56" y="44" width="358" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mh5-dZ-BsP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mh5-dZ-BsP">
                                 <rect key="frame" x="0.0" y="100" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -110,6 +110,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="2ge-NU-vD2" id="YNY-9N-gH4"/>
                         <outlet property="searchTableView" destination="mh5-dZ-BsP" id="P2N-Np-IIa"/>
                     </connections>
                 </viewController>

@@ -36,7 +36,6 @@ class BoxOfficeViewController: UIViewController {
         return yesterday
     }
     
-    // 허거덩,, 클로저 맞게쓴건가,, 클로저 아닌가,,
     func getData(yesterday: () -> String) {
         
         self.dateTextField.text = "\(yesterday())"

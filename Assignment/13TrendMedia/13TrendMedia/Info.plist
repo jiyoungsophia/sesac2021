@@ -10,6 +10,8 @@
 	<string>$(NAVER_SECRET_KEY)</string>
 	<key>KOFIC_API_KEY</key>
 	<string>$(KOFIC_API_KEY)</string>
+	<key>TMDB_API_KEY</key>
+	<string>$(TMDB_API_KEY)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>현재 위치를 알기 위해 이 권한이 필요합니다</string>
 	<key>CFBundleExecutable</key>
