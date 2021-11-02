@@ -22,10 +22,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tg5-tX-Of8">
                                         <rect key="frame" x="8" y="8" width="398" height="64"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="무엇을 구매하실 건가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp2-bf-XuW">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="무엇을 구매하실 건가요?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp2-bf-XuW">
                                                 <rect key="frame" x="8" y="8" width="314" height="48"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                <color key="textColor" systemColor="systemGray3Color"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -66,7 +66,7 @@
                                     <constraint firstAttribute="height" constant="80" id="utP-Dn-kFR"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qvs-re-rZT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qvs-re-rZT">
                                 <rect key="frame" x="0.0" y="168" width="414" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -87,7 +87,9 @@
                                                                 <constraint firstAttribute="height" constant="40" id="wyT-Nf-uHf"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" image="checkmark.square.fill" catalog="system"/>
+                                                            <state key="normal" image="checkmark.square" catalog="system">
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                                            </state>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-rk-5mY">
                                                             <rect key="frame" x="346" y="10" width="40" height="40"/>
@@ -96,7 +98,9 @@
                                                                 <constraint firstAttribute="width" constant="40" id="iWm-V3-tM4"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <state key="normal" image="star.fill" catalog="system"/>
+                                                            <state key="normal" image="star" catalog="system">
+                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                                            </state>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rg-xi-IiY">
                                                             <rect key="frame" x="72" y="19.5" width="262" height="21"/>
@@ -149,7 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="쇼핑" id="rIt-by-XIb"/>
                     <connections>
-                        <outlet property="addButton" destination="qa9-j1-nHj" id="Iig-fO-eYj"/>
+                        <outlet property="addButton" destination="qa9-j1-nHj" id="tvs-gS-8MI"/>
                         <outlet property="headerView" destination="tg5-tX-Of8" id="I3U-Lt-ca9"/>
                         <outlet property="shoppingListTextField" destination="dp2-bf-XuW" id="otj-Ti-hYV"/>
                         <outlet property="tableView" destination="qvs-re-rZT" id="qBa-HQ-Idf"/>
@@ -179,13 +183,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

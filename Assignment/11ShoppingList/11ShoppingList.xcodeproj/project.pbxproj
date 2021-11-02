@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6DCF429058BC1B1CC1AC85 /* Pods_11ShoppingList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DAE4CAE12A38C6C37422C4 /* Pods_11ShoppingList.framework */; };
+		3EA0766E27313F5000D27100 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0766D27313F5000D27100 /* RealmModel.swift */; };
 		3EE9A7C92716D73900EFAF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7C82716D73900EFAF97 /* AppDelegate.swift */; };
 		3EE9A7CB2716D73900EFAF97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7CA2716D73900EFAF97 /* SceneDelegate.swift */; };
 		3EE9A7CD2716D73900EFAF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7CC2716D73900EFAF97 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02DAE4CAE12A38C6C37422C4 /* Pods_11ShoppingList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_11ShoppingList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EA0766D27313F5000D27100 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		3EE9A7C52716D73900EFAF97 /* 11ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE9A7C82716D73900EFAF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EE9A7CA2716D73900EFAF97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		3EE9A7EE2717D70800EFAF97 /* ShoppingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListCell.swift; sourceTree = "<group>"; };
 		3EE9A7F527182DB900EFAF97 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		3EE9A7F9271837F400EFAF97 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		4CB6D9E31C118422A6F240DB /* Pods-11ShoppingList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11ShoppingList.debug.xcconfig"; path = "Target Support Files/Pods-11ShoppingList/Pods-11ShoppingList.debug.xcconfig"; sourceTree = "<group>"; };
+		8C7DEA9D72525E11E50EC5BE /* Pods-11ShoppingList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-11ShoppingList.release.xcconfig"; path = "Target Support Files/Pods-11ShoppingList/Pods-11ShoppingList.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6DCF429058BC1B1CC1AC85 /* Pods_11ShoppingList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8EB7D9152101EAE89F85C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CB6D9E31C118422A6F240DB /* Pods-11ShoppingList.debug.xcconfig */,
+				8C7DEA9D72525E11E50EC5BE /* Pods-11ShoppingList.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3EE9A7BC2716D73900EFAF97 = {
 			isa = PBXGroup;
 			children = (
 				3EE9A7C72716D73900EFAF97 /* 11ShoppingList */,
 				3EE9A7C62716D73900EFAF97 /* Products */,
+				0F8EB7D9152101EAE89F85C3 /* Pods */,
+				63C012CC554919A85036262D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +90,17 @@
 				3EE9A7D12716D73D00EFAF97 /* Assets.xcassets */,
 				3EE9A7D32716D73D00EFAF97 /* LaunchScreen.storyboard */,
 				3EE9A7D62716D73D00EFAF97 /* Info.plist */,
+				3EA0766D27313F5000D27100 /* RealmModel.swift */,
 			);
 			path = 11ShoppingList;
+			sourceTree = "<group>";
+		};
+		63C012CC554919A85036262D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02DAE4CAE12A38C6C37422C4 /* Pods_11ShoppingList.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EE9A7D92716D73D00EFAF97 /* Build configuration list for PBXNativeTarget "11ShoppingList" */;
 			buildPhases = (
+				E10BA2956CBD4A92F8ECF64C /* [CP] Check Pods Manifest.lock */,
 				3EE9A7C12716D73900EFAF97 /* Sources */,
 				3EE9A7C22716D73900EFAF97 /* Frameworks */,
 				3EE9A7C32716D73900EFAF97 /* Resources */,
+				AE23B0B32AD2FEB37F67C591 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,12 +170,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AE23B0B32AD2FEB37F67C591 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-11ShoppingList/Pods-11ShoppingList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-11ShoppingList/Pods-11ShoppingList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-11ShoppingList/Pods-11ShoppingList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E10BA2956CBD4A92F8ECF64C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-11ShoppingList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3EE9A7C12716D73900EFAF97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3EE9A7CD2716D73900EFAF97 /* ViewController.swift in Sources */,
+				3EA0766E27313F5000D27100 /* RealmModel.swift in Sources */,
 				3EE9A7FA271837F400EFAF97 /* ShoppingList.swift in Sources */,
 				3EE9A7C92716D73900EFAF97 /* AppDelegate.swift in Sources */,
 				3EE9A7F627182DB900EFAF97 /* ShoppingListViewController.swift in Sources */,
@@ -295,6 +367,7 @@
 		};
 		3EE9A7DA2716D73D00EFAF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CB6D9E31C118422A6F240DB /* Pods-11ShoppingList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,6 +386,7 @@
 		};
 		3EE9A7DB2716D73D00EFAF97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7DEA9D72525E11E50EC5BE /* Pods-11ShoppingList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
