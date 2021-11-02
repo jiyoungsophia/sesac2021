@@ -12,6 +12,7 @@ enum LocalizableStrings: String {
     case data_backup
     case writing_diary
     case save_button
+    case enter_title
     
     var localized: String {
         return self.rawValue.localized() // Localizable.strings
