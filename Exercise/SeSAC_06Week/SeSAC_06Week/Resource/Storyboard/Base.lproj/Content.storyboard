@@ -68,6 +68,7 @@
                     <connections>
                         <outlet property="addTextView" destination="lWO-Wa-pR7" id="B4j-WD-vxw"/>
                         <outlet property="addTitle" destination="nDc-73-pvh" id="ryO-ah-Pdc"/>
+                        <outlet property="contentImageView" destination="Kk9-Ju-WWm" id="uwJ-Ab-bwj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ee2-ws-dcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
