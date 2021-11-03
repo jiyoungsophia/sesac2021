@@ -9,6 +9,14 @@ import UIKit
 import RealmSwift
 
 
+enum filterType {
+    case check
+    case star
+    case title
+
+    
+}
+
 class ShoppingListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +28,11 @@ class ShoppingListViewController: UIViewController {
     var isStarred: [Bool] = [false]
     
     let localRealm = try! Realm()
-    var tasks: Results<ShoppingMemo>!
+    var tasks: Results<ShoppingMemo>! {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +48,29 @@ class ShoppingListViewController: UIViewController {
         tableView.dataSource = self
         
         tasks = localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "regDate", ascending: false)
+    }
+    
+    func setAlertUI() {
+        let alert = UIAlertController(title: "정렬하기", message: nil, preferredStyle: .actionSheet)
+        
+        let check = UIAlertAction(title: "할 일", style: .default) { action in
+            self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "check", ascending: false)
+        }
+        let star = UIAlertAction(title: "즐겨찾기", style: .default) { action in
+            self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "star", ascending: false)
+        }
+        let title = UIAlertAction(title: "제목", style: .default) { action in
+            self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "shopMemo", ascending: false)
+
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(check)
+        alert.addAction(star)
+        alert.addAction(title)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
@@ -54,14 +89,17 @@ class ShoppingListViewController: UIViewController {
             print("error")
         }
     }
-
+    
+    @IBAction func filterButtonClicked(_ sender: UIBarButtonItem) {
+        setAlertUI()
+    }
     
     @objc func checkButtonClicked(selectButton: UIButton) {
         let taskToUpdate = tasks[selectButton.tag]
         try! localRealm.write {
             taskToUpdate.check = !taskToUpdate.check
         }
-        tableView.reloadRows(at: [IndexPath(row: selectButton.tag, section: 0)], with: .automatic)
+        tableView.reloadData()
     }
     
     @objc func starButtonClicked(selectButton: UIButton) {
@@ -69,10 +107,9 @@ class ShoppingListViewController: UIViewController {
         try! localRealm.write {
             taskToUpdate.star = !taskToUpdate.star
         }
-        tableView.reloadRows(at: [IndexPath(row: selectButton.tag, section: 0)], with: .automatic)
+        tableView.reloadData()
     }
 }
-
 
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -115,12 +152,11 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let taskToDelete = tasks[indexPath.row]
-            try! localRealm.write {
-                localRealm.delete(taskToDelete)
+            let row = tasks[indexPath.row]
+            try! localRealm.write{
+                localRealm.delete(row)
+                tableView.reloadData()
             }
-            
-            tableView.reloadData()
         }
     }
 }

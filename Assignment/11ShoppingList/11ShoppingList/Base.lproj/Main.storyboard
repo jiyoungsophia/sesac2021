@@ -151,7 +151,14 @@
                             <constraint firstItem="fYp-eB-Z16" firstAttribute="top" secondItem="m6O-wC-UuT" secondAttribute="top" id="wf7-pv-Ptr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="쇼핑" id="rIt-by-XIb"/>
+                    <navigationItem key="navigationItem" title="쇼핑" id="rIt-by-XIb">
+                        <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease" catalog="system" id="iZK-QK-fvO">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="filterButtonClicked:" destination="Elf-Bl-j3E" id="meZ-k8-URW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="qa9-j1-nHj" id="tvs-gS-8MI"/>
                         <outlet property="headerView" destination="tg5-tX-Of8" id="I3U-Lt-ca9"/>
@@ -184,6 +191,7 @@
     </scenes>
     <resources>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
