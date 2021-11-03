@@ -112,6 +112,12 @@
 
 <br>
 
+> [🌱 21th Session - 211027](./TIL/day21-211027.md) 
+
+* `Pagination과 구현방법`
+
+<br>
+
 > [🌱 24th Session - 211101](./TIL/day24-211101.md) 
 
 * `Custom Font`, `Internationalization&Localization`

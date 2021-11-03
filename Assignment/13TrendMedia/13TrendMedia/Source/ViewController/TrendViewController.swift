@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class TrendViewController: UIViewController {
-
+    
     private let cellIdentifier: String = "TrendCell"
     
     @IBOutlet weak var buttonBackView: UIView!
@@ -18,9 +18,12 @@ class TrendViewController: UIViewController {
     var tvShowList = TvShowInfomation()
     var tvData: [TrendModel] = []
     
+    var startPage = 1
+    var totalPages = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTrendData()
+        getTrendData() // 여기서 데이터 다 받아오는데 페이지네이션이 의미가잇나,,?
         setTableView()
         buttonBackView.setViewShadow()
         navigationItem.backBarButtonItem?.tintColor = .black
@@ -30,7 +33,7 @@ class TrendViewController: UIViewController {
         TrendAPIService.shared.fetchTrendData { (code, json) in
             switch code {
             case 200:
-//                print(json)
+                //                print(json)
                 
                 for result in json["results"].arrayValue {
                     // TODO: - 장르 수정
@@ -42,8 +45,10 @@ class TrendViewController: UIViewController {
                     let rate = "\(round(rateInput * 10) / 10)"
                     let release = result["first_air_date"].stringValue
                     
+                    self.totalPages = result["total_pages"].intValue
+                    
                     let data = TrendModel(genreIDData: genreId, enTitleData: enTitle, posterImageData: image, rateData: rate, koTitleData: title, releaseData: release)
-                     
+                    
                     self.tvData.append(data)
                 }
                 self.trendTableView.reloadData()
@@ -51,7 +56,7 @@ class TrendViewController: UIViewController {
                 
             case 400:
                 print(json)
-        
+                
             default:
                 print("오류")
             }
@@ -64,6 +69,7 @@ class TrendViewController: UIViewController {
         
         trendTableView.delegate = self
         trendTableView.dataSource = self
+        trendTableView.prefetchDataSource = self
     }
     
     
@@ -102,7 +108,6 @@ class TrendViewController: UIViewController {
 
 extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
         return tvData.count
     }
     
@@ -143,10 +148,27 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
-    
-    // TODO: - pagenation
+ 
     
 }
+
+extension TrendViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        for indexPath in indexPaths {
+            if tvData.count - 1 == indexPath.row && tvData.count < totalPages {
+                startPage = min(startPage + 1, totalPages)
+                getTrendData()
+//                print("페이지네이션: \(indexPaths)")
+            }
+        }
+    }
+    
+    // 취소
+    func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("취소: \(indexPaths)")
+    }
+}
+
 
 extension TrendViewController: LinkButtonCellDelegate {
     func linkButtonClicked(indexPathRow: Int) {

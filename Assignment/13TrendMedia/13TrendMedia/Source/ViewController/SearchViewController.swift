@@ -156,7 +156,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UITa
         for indexPath in indexPaths {
             // 사용자가 보고있는 셀이 가장 마지막 셀이면
             if movieData.count - 1 == indexPath.row && movieData.count < totalCount {
-                startPage += 10
+                startPage = min(startPage + 10, totalCount)
                 guard let text = searchBar.text else { return }
                 fetchMovieData(query: text)
             }
