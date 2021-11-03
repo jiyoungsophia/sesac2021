@@ -9,11 +9,8 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 struct TrendAPIService {
     static let shared = TrendAPIService()
-    
-    
     
     func fetchTrendData(result: @escaping (Int, JSON) -> () ) {
         let params = [
@@ -27,7 +24,7 @@ struct TrendAPIService {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+//                print("JSON: \(json)")
                 
                 let code = response.response?.statusCode ?? 500
                 result(code, json)

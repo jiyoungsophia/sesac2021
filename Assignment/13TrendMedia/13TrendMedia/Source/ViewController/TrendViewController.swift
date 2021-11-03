@@ -30,7 +30,7 @@ class TrendViewController: UIViewController {
         TrendAPIService.shared.fetchTrendData { (code, json) in
             switch code {
             case 200:
-                print(json)
+//                print(json)
                 
                 for result in json["results"].arrayValue {
                     // TODO: - 장르 수정
