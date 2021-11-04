@@ -11,10 +11,36 @@
         <!--Setting-->
         <scene sceneID="i5g-Cc-9M0">
             <objects>
-                <viewController id="tIV-aQ-u1P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" id="tIV-aQ-u1P" customClass="SettingViewController" customModule="SeSAC_06Week" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udp-Tt-mkf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q96-d4-gFO">
+                                <rect key="frame" x="128" y="119" width="158" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="백업하기"/>
+                                <connections>
+                                    <action selector="backupButtonClicked:" destination="tIV-aQ-u1P" eventType="touchUpInside" id="lgw-34-yW7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fZ-vB-Jth">
+                                <rect key="frame" x="131" y="269" width="152" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="activityVC"/>
+                                <connections>
+                                    <action selector="activityVCButtonClicked:" destination="tIV-aQ-u1P" eventType="touchUpInside" id="RZ5-Fa-gED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvV-EX-X46">
+                                <rect key="frame" x="128" y="438" width="155" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="복구하기"/>
+                                <connections>
+                                    <action selector="restoreButtonClicked:" destination="tIV-aQ-u1P" eventType="touchUpInside" id="lYq-wv-CRi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="da9-D8-sv8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -23,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVl-6i-m53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="0.0"/>
+            <point key="canvasLocation" x="95.652173913043484" y="0.0"/>
         </scene>
     </scenes>
     <resources>
