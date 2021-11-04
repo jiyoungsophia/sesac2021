@@ -39,10 +39,9 @@ class SearchViewController: UIViewController {
         let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
         let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
         let path = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
-        
+
         if let directoryPath = path.first {
-            let imageURL = URL(fileURLWithPath: directoryPath)
-                .appendingPathComponent(imageName)
+            let imageURL = URL(fileURLWithPath: directoryPath).appendingPathComponent("imageFolder").appendingPathComponent(imageName)
             return UIImage(contentsOfFile: imageURL.path)
         }
         return nil
@@ -50,7 +49,7 @@ class SearchViewController: UIViewController {
     
     func deleteImageFromDocumentDirectory(imageName: String) {
         // 1. 이미지 저장할 경로 설정: 도큐먼트 폴더(.documentDirectory), FileManager
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("imageFolder") else { return }
         
         // 2. 이미지 파일 이름 & 최종 경로 설정
         let imageURL = documentDirectory.appendingPathComponent(imageName)
