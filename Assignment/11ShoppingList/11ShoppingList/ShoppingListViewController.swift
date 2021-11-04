@@ -54,10 +54,10 @@ class ShoppingListViewController: UIViewController {
         let alert = UIAlertController(title: "정렬하기", message: nil, preferredStyle: .actionSheet)
         
         let check = UIAlertAction(title: "할 일", style: .default) { action in
-            self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "check", ascending: false)
+            self.tasks = self.localRealm.objects(ShoppingMemo.self).filter("check == true")//sorted(byKeyPath: "check", ascending: false)
         }
         let star = UIAlertAction(title: "즐겨찾기", style: .default) { action in
-            self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "star", ascending: false)
+            self.tasks = self.localRealm.objects(ShoppingMemo.self).filter("star == true")//.sorted(byKeyPath: "star", ascending: false)
         }
         let title = UIAlertAction(title: "제목", style: .default) { action in
             self.tasks = self.localRealm.objects(ShoppingMemo.self).sorted(byKeyPath: "shopMemo", ascending: false)
