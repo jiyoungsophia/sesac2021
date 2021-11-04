@@ -8,6 +8,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--설정-->
+        <scene sceneID="btx-58-UYL">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="zgA-Yg-ing" customClass="SettingViewController" customModule="_1ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qbo-3r-TAg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hgS-Dj-7S8">
+                                <rect key="frame" x="0.0" y="96" width="414" height="107.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0I-tE-LJI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="압축파일로 백업하기">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backupButtonClicked:" destination="zgA-Yg-ing" eventType="touchUpInside" id="VvL-wP-BxY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-BX-c2n">
+                                        <rect key="frame" x="0.0" y="58" width="414" height="49.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="압축파일에서 복원하기">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restoreButtonClicked:" destination="zgA-Yg-ing" eventType="touchUpInside" id="1o2-Ru-26q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="99G-N5-vG4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgS-Dj-7S8" firstAttribute="trailing" secondItem="99G-N5-vG4" secondAttribute="trailing" id="6eH-4l-NqV"/>
+                            <constraint firstItem="hgS-Dj-7S8" firstAttribute="top" secondItem="99G-N5-vG4" secondAttribute="top" constant="8" id="6kS-Dd-eSR"/>
+                            <constraint firstItem="hgS-Dj-7S8" firstAttribute="height" secondItem="Qbo-3r-TAg" secondAttribute="height" multiplier="0.12" id="9Wk-8q-bhx"/>
+                            <constraint firstItem="hgS-Dj-7S8" firstAttribute="leading" secondItem="99G-N5-vG4" secondAttribute="leading" id="Hy4-dC-YP3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="설정" id="p2p-B6-b9N"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYE-vf-6sI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3337.68115942029" y="83.705357142857139"/>
+        </scene>
         <!--쇼핑-->
         <scene sceneID="SUg-10-Fl9">
             <objects>
@@ -152,6 +203,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="쇼핑" id="rIt-by-XIb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="C1e-3n-bf3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="gearshape" catalog="system" id="tOV-Ru-DKV">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="zgA-Yg-ing" kind="push" id="oDO-eR-GiC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease" catalog="system" id="iZK-QK-fvO">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -191,6 +249,7 @@
     </scenes>
     <resources>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">

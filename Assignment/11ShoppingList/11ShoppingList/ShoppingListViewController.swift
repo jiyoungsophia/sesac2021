@@ -9,14 +9,6 @@ import UIKit
 import RealmSwift
 
 
-enum filterType {
-    case check
-    case star
-    case title
-
-    
-}
-
 class ShoppingListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!

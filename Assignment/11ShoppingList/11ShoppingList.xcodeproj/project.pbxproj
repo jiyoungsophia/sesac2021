@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B6DCF429058BC1B1CC1AC85 /* Pods_11ShoppingList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DAE4CAE12A38C6C37422C4 /* Pods_11ShoppingList.framework */; };
 		3EA0766E27313F5000D27100 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA0766D27313F5000D27100 /* RealmModel.swift */; };
+		3EA076982733D80600D27100 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076972733D80600D27100 /* SettingViewController.swift */; };
 		3EE9A7C92716D73900EFAF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7C82716D73900EFAF97 /* AppDelegate.swift */; };
 		3EE9A7CB2716D73900EFAF97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7CA2716D73900EFAF97 /* SceneDelegate.swift */; };
 		3EE9A7CD2716D73900EFAF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE9A7CC2716D73900EFAF97 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		02DAE4CAE12A38C6C37422C4 /* Pods_11ShoppingList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_11ShoppingList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA0766D27313F5000D27100 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		3EA076972733D80600D27100 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3EE9A7C52716D73900EFAF97 /* 11ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 11ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE9A7C82716D73900EFAF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EE9A7CA2716D73900EFAF97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3EE9A7CC2716D73900EFAF97 /* ViewController.swift */,
 				3EE9A7EE2717D70800EFAF97 /* ShoppingListCell.swift */,
 				3EE9A7CE2716D73900EFAF97 /* Main.storyboard */,
+				3EA076972733D80600D27100 /* SettingViewController.swift */,
 				3EE9A7F527182DB900EFAF97 /* ShoppingListViewController.swift */,
 				3EE9A7F9271837F400EFAF97 /* ShoppingList.swift */,
 				3EE9A7D12716D73D00EFAF97 /* Assets.xcassets */,
@@ -220,6 +223,7 @@
 				3EE9A7CD2716D73900EFAF97 /* ViewController.swift in Sources */,
 				3EA0766E27313F5000D27100 /* RealmModel.swift in Sources */,
 				3EE9A7FA271837F400EFAF97 /* ShoppingList.swift in Sources */,
+				3EA076982733D80600D27100 /* SettingViewController.swift in Sources */,
 				3EE9A7C92716D73900EFAF97 /* AppDelegate.swift in Sources */,
 				3EE9A7F627182DB900EFAF97 /* ShoppingListViewController.swift in Sources */,
 				3EE9A7CB2716D73900EFAF97 /* SceneDelegate.swift in Sources */,

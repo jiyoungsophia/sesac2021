@@ -7,5 +7,9 @@ target '11ShoppingList' do
 
   # Pods for 11ShoppingList
   pod 'RealmSwift', '~>10'
+  pod 'JGProgressHUD'
+  pod 'Zip', '~> 2.1'
+  pod 'Toast-Swift', '~> 5.0.1'
+
 
 end
