@@ -15,12 +15,14 @@ class AddViewController: UIViewController {
     
     let localRealm = try! Realm()
     
+    let imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUI()
         print("Realm is located at: \(localRealm.configuration.fileURL!)")
-         
+        
     }
     
     func setUI() {
@@ -29,30 +31,58 @@ class AddViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalizableStrings.save_button.localized, style: .plain, target: self, action: #selector(saveButtonClicked))
         self.navigationController?.navigationBar.isTranslucent = false
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickContentImageView))
+        contentImageView.addGestureRecognizer(tapGesture)
+        contentImageView.isUserInteractionEnabled = true
+        
         addTitle.placeholder = LocalizableStrings.enter_title.localized
         addTitle.font = UIFont().diary
         addTextView.font = UIFont().diary
+        
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
     }
     
     @objc
     func closeButtonClicked() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @objc
     func saveButtonClicked() {
         let task = UserDiary(diaryTitle: addTitle.text!, content: addTextView.text!, writeDate: Date(), regDate: Date())
         try! localRealm.write {
             localRealm.add(task)
-            saveImageToDocumentDirectory(imageName: "\(task._id).jpeg", image: contentImageView.image!)
+            if let image = contentImageView.image {
+                saveImageToDocumentDirectory(imageName: "\(task._id).jpeg", image: image)
+            } else {
+                print("이미지 없이 저장")
+            }
         }
     }
     
+    @objc
+    func clickContentImageView() {
+        let alert = UIAlertController(title: "사진 가져오기", message: nil, preferredStyle: .actionSheet)
+        
+        let phtoLibrary = UIAlertAction(title: "사진 앨범", style: .default) { _ in
+            self.openPhotoLibrary()
+        }
+        let camera = UIAlertAction(title: "카메라", style: .default) { _ in
+            self.openCamera()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(phtoLibrary)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     func saveImageToDocumentDirectory(imageName: String, image: UIImage) {
-        // 1. 이미지 저장할 경로 설정: 도큐먼트 폴더(.documentDirectory), FileManager
         guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
         
-        // 폴더 만들기
         let folderPath = documentDirectory.appendingPathComponent("imageFolder")
         
         if !FileManager.default.fileExists(atPath: folderPath.path) {
@@ -63,29 +93,42 @@ class AddViewController: UIViewController {
             }
         }
         
-        // 2. 이미지 파일 이름 & 최종 경로 설정
-        // 폴더로 경로 변경
         let imageURL = folderPath.appendingPathComponent(imageName)
         
-        // 3. 이미지 압축
         guard let data = image.jpegData(compressionQuality: 0.2) else { return }
         
-        // 4. 이미지 저장: 동일한 경로에 이미지를 저장하게 될 경우, 덮어쓰기(원래는 자동으로 된다고,,)
-        // 4-1. 이미지 경로 여부 확인
-        if FileManager.default.fileExists(atPath: imageURL.path){
-            //4-2. 기존경로에 있는 이미지 삭제(원래 자동으로 삭제됨)
-            do {
-                try FileManager.default.removeItem(at: imageURL)
-                print("이미지 삭제 완")
-            } catch {
-                print("이미지 삭제하지 못했습니다")
-            }
-        }
-        // 5. 이미지 저장
         do {
             try data.write(to: imageURL)
         } catch {
             print("이미지를 저장하지 못했습니다")
         }
     }
+    
+    
+    func openPhotoLibrary() {
+        imagePicker.sourceType = .photoLibrary
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+        imagePicker.sourceType = .camera
+        self.present(imagePicker, animated: true, completion: nil)
+    }
 }
+
+extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(#function)
+        
+        if let value = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            contentImageView.image = value
+            picker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print(#function)
+    }
+}
+

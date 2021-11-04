@@ -32,41 +32,6 @@ class SearchViewController: UIViewController {
         
         searchTableView.reloadData()
     }
-    
-    // 도큐먼트 경로 -> 이미지 찾기 -> UIImage -> UIImageView
-    func loadImageFromDocumentDirectory(imageName: String) -> UIImage? {
-        
-        let documentDirectory = FileManager.SearchPathDirectory.documentDirectory
-        let userDomainMask = FileManager.SearchPathDomainMask.userDomainMask
-        let path = NSSearchPathForDirectoriesInDomains(documentDirectory, userDomainMask, true)
-
-        if let directoryPath = path.first {
-            let imageURL = URL(fileURLWithPath: directoryPath).appendingPathComponent("imageFolder").appendingPathComponent(imageName)
-            return UIImage(contentsOfFile: imageURL.path)
-        }
-        return nil
-    }
-    
-    func deleteImageFromDocumentDirectory(imageName: String) {
-        // 1. 이미지 저장할 경로 설정: 도큐먼트 폴더(.documentDirectory), FileManager
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("imageFolder") else { return }
-        
-        // 2. 이미지 파일 이름 & 최종 경로 설정
-        let imageURL = documentDirectory.appendingPathComponent(imageName)
-               
-        // 4. 이미지 저장: 동일한 경로에 이미지를 저장하게 될 경우, 덮어쓰기(원래는 자동으로 된다고,,)
-        // 4-1. 이미지 경로 여부 확인
-        if FileManager.default.fileExists(atPath: imageURL.path){
-            //4-2. 기존경로에 있는 이미지 삭제(원래 자동으로 삭제됨)
-            do {
-                try FileManager.default.removeItem(at: imageURL)
-                print("이미지 삭제 완")
-            } catch {
-                print("이미지 삭제하지 못했습니다")
-            }
-        }
-    }
-
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -84,7 +49,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.searchTitle.text = row.diaryTitle
         cell.searchDate.text = "\(row.writeDate)"
         cell.searchContent.text = row.content
-        cell.searchImageView.image = loadImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
+        cell.searchImageView.image = ImageManager.shared.loadImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
         
         return cell
     }
@@ -95,13 +60,21 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 본래는 화면 전환 + 값 전달 후 새로운 화면에서 수정이 적합
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let taskToUpdate = tasks[indexPath.row]
+        
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        
+        vc.diaryData = tasks[indexPath.row]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
         //1. 수정 - 레코드에 대한 값 수정
-        try! localRealm.write{
-            taskToUpdate.diaryTitle = "새로 수정"
-            taskToUpdate.content = "본래는 화면 전환 + 값 전달 후 새로운 화면에서 수정이 적합"
-            tableView.reloadData()
-        }
+//        try! localRealm.write{
+//            taskToUpdate.diaryTitle = "새로 수정"
+//            taskToUpdate.content = "본래는 화면 전환 + 값 전달 후 새로운 화면에서 수정이 적합"
+//            tableView.reloadData()
+//        }
         //2. 일괄 수정
 //        try! localRealm.write{
 //            tasks.setValue("일괄 수정", forKey: "content")
@@ -119,16 +92,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 //            tableView.reloadData()
 //        }
         
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         let row = tasks[indexPath.row]
 
-        
         try! localRealm.write{
             // 순서 중요
-            deleteImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
+            ImageManager.shared.deleteImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
             localRealm.delete(row)
             tableView.reloadData()
         }

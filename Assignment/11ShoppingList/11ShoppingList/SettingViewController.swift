@@ -88,22 +88,6 @@ class SettingViewController: UIViewController {
         self.present(documentPicker, animated: true, completion: nil)
     }
     
-    func restoreFromZipFile() {
-        do {
-            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            let fileURL = documentDirectory.appendingPathComponent("shoppinglist_backup.zip")
-            
-            progress.show(in: view, animated: true)
-            try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
-                self.progress.dismiss(animated: true)
-            }, fileOutputHandler: { unzipFile in
-                print("unzipFile: \(unzipFile)")
-            })
-        } catch {
-            print("error")
-        }
-        
-    }
     
     @IBAction func backupButtonClicked(_ sender: UIButton) {
         let alert = UIAlertController(title: "백업하기", message: "파일에 저장해주세요", preferredStyle: .alert)
@@ -143,10 +127,38 @@ extension SettingViewController: UIDocumentPickerDelegate {
         let sandboxFileURL = directory.appendingPathComponent(selectedFileURL.lastPathComponent)
         
         if FileManager.default.fileExists(atPath: sandboxFileURL.path) {
-            restoreFromZipFile()
+            do {
+                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let fileURL = documentDirectory.appendingPathComponent("shoppinglist_backup.zip")
+                
+                progress.show(in: view, animated: true)
+                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
+                    self.progress.dismiss(animated: true)
+                }, fileOutputHandler: { unzipFile in
+                    print("unzipFile: \(unzipFile)")
+                })
+            } catch {
+                print("error")
+            }
+            
         } else {
             // 파일 앱의 zip -> 도큐먼트 폴더에 복사
-           restoreFromZipFile()
+            do {
+                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
+                
+                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+                let fileURL = documentDirectory.appendingPathComponent("shoppinglist_backup.zip")
+                
+                progress.show(in: view, animated: true)
+                try Zip.unzipFile(fileURL, destination: documentDirectory, overwrite: true, password: nil, progress: { progress in
+                    self.progress.dismiss(animated: true)
+                }, fileOutputHandler: { unzipFile in
+                    print("unzipFile: \(unzipFile)")
+                })
+            } catch {
+                print("error")
+            }
+            
         }
         
         let alert = UIAlertController(title: "복원 완료", message: "앱을 재실행해주세요", preferredStyle: .alert)

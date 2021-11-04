@@ -124,7 +124,6 @@ extension SettingViewController: UIDocumentPickerDelegate {
         // 복구2. 선택한 파일에 대한 경로 가져와야 함
         // ex. iphon/jack/fileapp/archive.zip
         guard let selectedFileURL = urls.first else { return }
-        
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let sandboxFileURL = directory.appendingPathComponent(selectedFileURL.lastPathComponent)
         
