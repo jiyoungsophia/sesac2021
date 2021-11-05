@@ -38,6 +38,9 @@
                                     <constraint firstAttribute="height" constant="44" id="z3R-2v-R8d"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dateButtonClicked:" destination="wE1-41-8dI" eventType="touchUpInside" id="Glc-Kp-93z"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="일기작성" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lWO-Wa-pR7">
                                 <rect key="frame" x="20" y="606" width="374" height="212"/>
@@ -69,11 +72,41 @@
                         <outlet property="addTextView" destination="lWO-Wa-pR7" id="B4j-WD-vxw"/>
                         <outlet property="addTitle" destination="nDc-73-pvh" id="ryO-ah-Pdc"/>
                         <outlet property="contentImageView" destination="Kk9-Ju-WWm" id="uwJ-Ab-bwj"/>
+                        <outlet property="dateButton" destination="59v-HA-eM5" id="k57-ti-kf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ee2-ws-dcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="199" y="105"/>
+        </scene>
+        <!--Date Picker View Controller-->
+        <scene sceneID="P8Y-8g-XAN">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerViewController" id="JoB-Ew-T5u" customClass="DatePickerViewController" customModule="SeSAC_06Week" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q5L-yd-AcF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="SWe-hL-uFh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Akq-Gm-qB6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Akq-Gm-qB6" firstAttribute="bottom" secondItem="SWe-hL-uFh" secondAttribute="bottom" id="Bej-iM-ZAW"/>
+                            <constraint firstItem="SWe-hL-uFh" firstAttribute="trailing" secondItem="Akq-Gm-qB6" secondAttribute="trailing" id="dxK-fE-CvD"/>
+                            <constraint firstItem="SWe-hL-uFh" firstAttribute="leading" secondItem="Akq-Gm-qB6" secondAttribute="leading" id="lIa-SS-YA2"/>
+                            <constraint firstItem="SWe-hL-uFh" firstAttribute="top" secondItem="Akq-Gm-qB6" secondAttribute="top" id="oCC-yA-cXc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="SWe-hL-uFh" id="vZj-Ak-HeY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXa-mx-vDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="128"/>
         </scene>
     </scenes>
     <resources>

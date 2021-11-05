@@ -10,6 +10,30 @@ import UIKit
 class ImageManager {
     static let shared = ImageManager()
     
+    func saveImageToDocumentDirectory(imageName: String, image: UIImage) {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        
+        let folderPath = documentDirectory.appendingPathComponent("imageFolder")
+        
+        if !FileManager.default.fileExists(atPath: folderPath.path) {
+            do {
+                try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: false, attributes: nil)
+            } catch {
+                print("cannot create folder")
+            }
+        }
+        
+        let imageURL = folderPath.appendingPathComponent(imageName)
+        
+        guard let data = image.jpegData(compressionQuality: 0.2) else { return }
+        
+        do {
+            try data.write(to: imageURL)
+        } catch {
+            print("이미지를 저장하지 못했습니다")
+        }
+    }
+    
     // 도큐먼트 경로 -> 이미지 찾기 -> UIImage -> UIImageView
     func loadImageFromDocumentDirectory(imageName: String) -> UIImage? {
         

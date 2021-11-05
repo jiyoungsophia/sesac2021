@@ -12,6 +12,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var addTitle: UITextField!
     @IBOutlet weak var addTextView: UITextView!
     @IBOutlet weak var contentImageView: UIImageView!
+    @IBOutlet weak var dateButton: UIButton!
     
     let localRealm = try! Realm()
     
@@ -50,11 +51,20 @@ class AddViewController: UIViewController {
     
     @objc
     func saveButtonClicked() {
-        let task = UserDiary(diaryTitle: addTitle.text!, content: addTextView.text!, writeDate: Date(), regDate: Date())
+        
+//        let format = DateFormatter()
+//        format.dateFormat = "yyyy년 MM월 dd일"
+        
+        guard let date = dateButton.currentTitle, let value = DateFormatter.customFormat.date(from: date) else { return }
+        
+        let task = UserDiary(diaryTitle: addTitle.text!,
+                             content: addTextView.text!,
+                             writeDate: value,
+                             regDate: Date())
         try! localRealm.write {
             localRealm.add(task)
             if let image = contentImageView.image {
-                saveImageToDocumentDirectory(imageName: "\(task._id).jpeg", image: image)
+                ImageManager.shared.saveImageToDocumentDirectory(imageName: "\(task._id).jpeg", image: image)
             } else {
                 print("이미지 없이 저장")
             }
@@ -80,29 +90,7 @@ class AddViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    func saveImageToDocumentDirectory(imageName: String, image: UIImage) {
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        
-        let folderPath = documentDirectory.appendingPathComponent("imageFolder")
-        
-        if !FileManager.default.fileExists(atPath: folderPath.path) {
-            do {
-                try FileManager.default.createDirectory(atPath: folderPath.path, withIntermediateDirectories: false, attributes: nil)
-            } catch {
-                print("cannot create folder")
-            }
-        }
-        
-        let imageURL = folderPath.appendingPathComponent(imageName)
-        
-        guard let data = image.jpegData(compressionQuality: 0.2) else { return }
-        
-        do {
-            try data.write(to: imageURL)
-        } catch {
-            print("이미지를 저장하지 못했습니다")
-        }
-    }
+
     
     
     func openPhotoLibrary() {
@@ -114,6 +102,40 @@ class AddViewController: UIViewController {
         imagePicker.sourceType = .camera
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func dateButtonClicked(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "날짜 선택", message: "날짜를 선택해주세요", preferredStyle: .alert)
+        // alert customizing
+        // DatePickerViewController()는 코드만 가져오는것
+        // 스토리보드 씬 + 클래스 -> 화면 전환 코드
+//        let contentView = DatePickerViewController()
+        
+        guard let contentView = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as? DatePickerViewController else {
+            print("datepickerviewcontroller에 오류잇음")
+            return
+        }
+        contentView.view.backgroundColor = .clear
+//        contentView.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        contentView.preferredContentSize.height = 200
+        alert.setValue(contentView, forKey: "contentViewController")
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let ok = UIAlertAction(title: "확인", style: .default) { _ in
+          
+            let format = DateFormatter()
+            format.dateFormat = "yyyy년 MM월 dd일"
+            let value = format.string(from: contentView.datePicker.date)
+            
+            //확인 버튼 눌렀을 때 버튼의 타이틀 변경
+            self.dateButton.setTitle(value, for: .normal)
+        }
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
 extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
