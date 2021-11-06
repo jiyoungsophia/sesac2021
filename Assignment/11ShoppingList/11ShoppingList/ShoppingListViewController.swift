@@ -16,9 +16,6 @@ class ShoppingListViewController: UIViewController {
     @IBOutlet weak var shoppingListTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
-    var isChecked: [Bool] = [false]
-    var isStarred: [Bool] = [false]
-    
     let localRealm = try! Realm()
     var tasks: Results<ShoppingMemo>! {
         didSet {
@@ -66,12 +63,14 @@ class ShoppingListViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
-        // if문 두번으로밖에 해결 못하는 일일까,, 맘에 안들어,,
+        
         if let text = shoppingListTextField.text {
             if text == "" {
                 print("쇼핑리스트를 적어주세요") // 나중에 toast나 alert로 바꾸기
             } else {
-                let task = ShoppingMemo(shopMemo: text, check: isChecked[sender.tag], star: isStarred[sender.tag], regDate: Date())
+                
+                
+                let task = ShoppingMemo(shopMemo: text, check: false, star: false, regDate: Date())
                 try! localRealm.write {
                     localRealm.add(task)
                 }
