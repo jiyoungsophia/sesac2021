@@ -8,7 +8,7 @@
 
 <details>
     <summary><strong>TIL</strong></summary>
-
+### Week 1
 
 > [🌱 3rd Session - 210929](./TIL/day3-210929.md) (update : 211005)
 
@@ -27,6 +27,8 @@
 * `다크 모드 대응`, `외부 매개변수와 내부 매개변수`, `와일드 카드 식별자`,  `Xcode Tips: AutoLayout 단축키, Attributes Inspector 구조 `  
 
 <br>
+
+### Week 2
 
 > [🌱 6th Session - 211005](./TIL/day6-211005.md) (update: 211006)
 
@@ -52,6 +54,8 @@
 
 <br>
 
+### Week 3
+
 > [🌱 10th Session - 211012](./TIL/day10-211012.md) 
 
 * `Optional Binding`, `Optional Chaining`, `TableViewCell Reuse mechanism`
@@ -76,6 +80,8 @@
 
 <br>
 
+### Week 4
+
 > [🌱 14th Session - 211018](./TIL/day14-211018.md) 
 
 * `Protocol & Protocol Method`, `Protocol Property`, `Optional Protocol`, `CaseIterable`
@@ -90,7 +96,7 @@
 
 > [🌱 16th Session - 211020](./TIL/day16-211020.md) (update later)
 
-* `Authorization Status`, `MapKit`
+* `Authorization Status`, `CLLocationManager`
 
 <br>
 
@@ -99,6 +105,8 @@
 * `First Class Object`, `Closure`
 
 <br>
+
+### Week 5
 
 > [🌱 19th Session - 211025](./TIL/day19-211025.md) 
 
@@ -118,6 +126,20 @@
 
 <br>
 
+> 🌱 22th Session - 211028 
+
+* `고차함수: filter, map, reduce`
+
+<br>
+
+> 🌱 23th Session - 211029 
+
+* `Multi Thread`, `비동기처리: Dispatch Queue`
+
+<br>
+
+### Week 6
+
 > [🌱 24th Session - 211101](./TIL/day24-211101.md) 
 
 * `Custom Font`, `Internationalization&Localization`
@@ -133,6 +155,12 @@
 > [🌱 27th Session - 211104](./TIL/day27-211104.md) 
 
 * `FileManager: 폴더 만들어서 사진 저장하기`
+
+<br>
+
+> 🌱 28th Session - 211105 
+
+* `FSCalendar` 
 
 <br>
 
