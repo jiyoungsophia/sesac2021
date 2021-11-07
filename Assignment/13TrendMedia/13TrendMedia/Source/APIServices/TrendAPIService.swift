@@ -35,4 +35,28 @@ struct TrendAPIService {
         }
     }
     
+    func fetchGenreData(result: @escaping (Int, JSON) -> () ) {
+        let params = [
+            "api_key" : Constants.tmdbKey,
+            "language" : "ko-KR"
+        ]
+        
+        AF.request(Endpoint.tmdbGenreURL,
+                   method: .get,
+                   parameters: params,
+                   encoding: URLEncoding(destination: .queryString)).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+//                print("JSON: \(json)")
+                
+                let code = response.response?.statusCode ?? 500
+                result(code, json)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
 }

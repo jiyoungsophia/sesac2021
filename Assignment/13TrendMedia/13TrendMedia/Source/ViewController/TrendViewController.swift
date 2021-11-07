@@ -17,27 +17,48 @@ class TrendViewController: UIViewController {
     
     var tvShowList = TvShowInfomation()
     var tvData: [TrendModel] = []
+    var genres = [Int : String]()
     
     var startPage = 1
     var totalPages = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getTrendData() // 여기서 데이터 다 받아오는데 페이지네이션이 의미가잇나,,?
-        setTableView()
-        buttonBackView.setViewShadow()
-        navigationItem.backBarButtonItem?.tintColor = .black
+        getGenreData()
+        getTrendData()
+        setUI()
+    }
+    
+    func getGenreData() {
+        TrendAPIService.shared.fetchGenreData { (code, json) in
+            switch code {
+            
+            case 200:
+                for result in json["genres"].arrayValue {
+                    
+                    let id = result["id"].intValue
+                    let name = result["name"].stringValue
+                    
+                    self.genres.updateValue(name, forKey: id)
+                }
+
+            case 400:
+            print(json)
+            
+            default:
+            print("오류")
+            }
+        }
     }
     
     func getTrendData() {
         TrendAPIService.shared.fetchTrendData { (code, json) in
             switch code {
             case 200:
-                //                print(json)
-                
+     
                 for result in json["results"].arrayValue {
-                    // TODO: - 장르 수정
-                    let genreId = result["genre_ids"][0].stringValue
+                    let movieId = result["id"].intValue
+                    let genreId = result["genre_ids"].arrayValue.map { $0.intValue }
                     let enTitle = result["name"].stringValue
                     let title = result["original_name"].stringValue
                     let image = result["backdrop_path"].stringValue
@@ -47,10 +68,11 @@ class TrendViewController: UIViewController {
                     
                     self.totalPages = result["total_pages"].intValue
                     
-                    let data = TrendModel(genreIDData: genreId, enTitleData: enTitle, posterImageData: image, rateData: rate, koTitleData: title, releaseData: release)
+                    let data = TrendModel(movieId: movieId, genreIDData: genreId, enTitleData: enTitle, posterImageData: image, rateData: rate, koTitleData: title, releaseData: release)
                     
                     self.tvData.append(data)
                 }
+
                 self.trendTableView.reloadData()
                 
                 
@@ -63,13 +85,16 @@ class TrendViewController: UIViewController {
         }
     }
     
-    func setTableView() {
+    func setUI() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
         trendTableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
         
         trendTableView.delegate = self
         trendTableView.dataSource = self
         trendTableView.prefetchDataSource = self
+        
+        buttonBackView.setViewShadow()
+        navigationItem.backBarButtonItem?.tintColor = .black
     }
     
     
@@ -123,7 +148,15 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         
         let row = tvData[indexPath.row]
         
-        cell.genreLabel.text = row.genreIDData
+        //이것만 3시간을 넘게 헤맷다니,, 데이터가 한번만 꼬여도 갈피를 못잡는것같다ㅠㅠ
+        var genreLabel = ""
+        for genre in row.genreIDData {
+            if let text = self.genres[genre]?.replacingOccurrences(of: " ", with: "") {
+                genreLabel.append("#\(text) ")
+            }
+        }
+        cell.genreLabel.text = genreLabel
+     
         cell.enTitleLabel.text = row.enTitleData
         
         let url = URL(string: "https://image.tmdb.org/t/p/w500/\(row.posterImageData)")
@@ -148,7 +181,7 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
- 
+    
     
 }
 
@@ -157,8 +190,8 @@ extension TrendViewController: UITableViewDataSourcePrefetching {
         for indexPath in indexPaths {
             if tvData.count - 1 == indexPath.row && tvData.count < totalPages {
                 startPage = min(startPage + 1, totalPages)
+                getGenreData()
                 getTrendData()
-//                print("페이지네이션: \(indexPaths)")
             }
         }
     }

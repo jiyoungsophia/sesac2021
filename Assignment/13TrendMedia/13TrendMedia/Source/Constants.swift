@@ -36,5 +36,6 @@ struct Endpoint {
     static let visionURL = "https://dapi.kakao.com/v2/vision/face/detect"
     static let tmdbTvDayURL = "https://api.themoviedb.org/3/trending/tv/day"
     static let tmdbImageURL = "https://image.tmdb.org/t/p/w500"
+    static let tmdbGenreURL = "https://api.themoviedb.org/3/genre/tv/list"
     static let boxofficeURL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
 }

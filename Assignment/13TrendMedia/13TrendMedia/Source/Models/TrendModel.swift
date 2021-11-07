@@ -8,10 +8,16 @@
 import Foundation
 
 struct TrendModel {
-    let genreIDData: String
+    let movieId: Int
+    let genreIDData: [Int]
     let enTitleData: String
     let posterImageData: String
     let rateData: String
     let koTitleData: String
     let releaseData: String
+}
+
+struct GenreModel {
+    let id: Int
+    let name: String
 }
