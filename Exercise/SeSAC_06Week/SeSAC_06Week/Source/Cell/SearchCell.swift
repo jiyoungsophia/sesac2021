@@ -16,7 +16,16 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var searchContent: UILabel!
     @IBOutlet weak var searchImageView: UIImageView!
     
-    
+    func configureCell(row: UserDiary) {
+        searchTitle.text = row.diaryTitle
+        
+        let format = DateFormatter()
+        format.dateFormat = "yyyy년 MM월 dd일"
+        searchDate.text = format.string(from: row.writeDate)
+        
+        searchContent.text = row.content
+        searchImageView.image = ImageManager.shared.loadImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

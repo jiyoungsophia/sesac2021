@@ -44,16 +44,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let row = tasks[indexPath.row]
-        
-        cell.searchTitle.text = row.diaryTitle
-        
-        let format = DateFormatter()
-        format.dateFormat = "yyyy년 MM월 dd일"
-        cell.searchDate.text = format.string(from: row.writeDate)
-        
-        cell.searchContent.text = row.content
-        cell.searchImageView.image = ImageManager.shared.loadImageFromDocumentDirectory(imageName: "\(row._id).jpeg")
+        cell.configureCell(row: tasks[indexPath.row])
         
         return cell
     }

@@ -14,6 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UILabel.appearance().textColor = .darkGray
+        UILabel.appearance().font = .boldSystemFont(ofSize: 20)
+        UILabel.appearance().textAlignment = .center
+        
+        UITableView.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
+        
+        UICollectionView.appearance().backgroundColor = .clear
+        
         return true
     }
 

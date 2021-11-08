@@ -44,6 +44,8 @@
 		3EA076BF2734C0F600D27100 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076BE2734C0F600D27100 /* CalendarViewController.swift */; };
 		3EA076C32734CE7400D27100 /* RealmQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076C22734CE7400D27100 /* RealmQuery.swift */; };
 		3EA076C62734D02000D27100 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076C52734D02000D27100 /* Date+Extensions.swift */; };
+		3EA076D02738AAAF00D27100 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076CF2738AAAF00D27100 /* HomeTableViewCell.swift */; };
+		3EA076D42738B17D00D27100 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA076D32738B17D00D27100 /* HomeCollectionViewCell.swift */; };
 		3ECDADA7272FDBD700669380 /* IMG_5106.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3ECDADA6272FDBD700669380 /* IMG_5106.JPG */; };
 		3ECDADAD272FDC8F00669380 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECDADAB272FDC8F00669380 /* SearchCell.swift */; };
 		3ECDADAE272FDC8F00669380 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ECDADAC272FDC8F00669380 /* SearchCell.xib */; };
@@ -101,6 +103,8 @@
 		3EA076BE2734C0F600D27100 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = SeSAC_06Week/Source/ViewController/CalendarViewController.swift; sourceTree = SOURCE_ROOT; };
 		3EA076C22734CE7400D27100 /* RealmQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmQuery.swift; sourceTree = "<group>"; };
 		3EA076C52734D02000D27100 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		3EA076CF2738AAAF00D27100 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		3EA076D32738B17D00D27100 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		3ECDADA6272FDBD700669380 /* IMG_5106.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5106.JPG; sourceTree = "<group>"; };
 		3ECDADAB272FDC8F00669380 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		3ECDADAC272FDC8F00669380 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
@@ -233,8 +237,10 @@
 		3ECDADAA272FDC6800669380 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3EA076CF2738AAAF00D27100 /* HomeTableViewCell.swift */,
 				3ECDADAB272FDC8F00669380 /* SearchCell.swift */,
 				3ECDADAC272FDC8F00669380 /* SearchCell.xib */,
+				3EA076D32738B17D00D27100 /* HomeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				3E408344272F88E200E25A99 /* String+Extensions.swift in Sources */,
 				3ECDADAD272FDC8F00669380 /* SearchCell.swift in Sources */,
 				3E408347272F89FA00E25A99 /* LocalizableStrings.swift in Sources */,
+				3EA076D02738AAAF00D27100 /* HomeTableViewCell.swift in Sources */,
 				3E6DCC032730C97A0096BE68 /* RealmModel.swift in Sources */,
 				3E408361272FD1B900E25A99 /* AddViewController.swift in Sources */,
 				3E408364272FD1D400E25A99 /* SearchViewController.swift in Sources */,
@@ -364,6 +371,7 @@
 				3EA076C62734D02000D27100 /* Date+Extensions.swift in Sources */,
 				3EA076B4273421E700D27100 /* ImageManager.swift in Sources */,
 				3E40831C272F738300E25A99 /* UIFont+Extensions.swift in Sources */,
+				3EA076D42738B17D00D27100 /* HomeCollectionViewCell.swift in Sources */,
 				3EA076BB2734B52300D27100 /* DatePickerViewController.swift in Sources */,
 				3E40835E272FD19700E25A99 /* HomeViewController.swift in Sources */,
 				3E408300272F6F3700E25A99 /* SceneDelegate.swift in Sources */,
