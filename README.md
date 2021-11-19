@@ -166,6 +166,26 @@
 
 <br>
 
+### Week 7
+
+> 🌱 29th Session - 211108 
+
+* `collectionView in TableView` , `(convenience) Initializer`
+
+<br>
+
+> 🌱 30th Session - 211109 
+
+* `Error Handling` 
+
+<br>
+
+> 🌱 31th Session - 211110
+
+* `값 전달: closure, notification, protocol` 
+
+<br>
+
 </details>
 
 
