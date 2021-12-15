@@ -19,6 +19,9 @@
 		B53289CB2766E49E00689C40 /* MainActivateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53289CA2766E49E00689C40 /* MainActivateButton.swift */; };
 		B53289D12768C23300689C40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B53289D02768C23300689C40 /* SnapKit */; };
 		B53289D32768CBBB00689C40 /* SnapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53289D22768CBBB00689C40 /* SnapDetailViewController.swift */; };
+		B53289D5276978F700689C40 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53289D4276978F700689C40 /* SettingViewController.xib */; };
+		B53289D72769792900689C40 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53289D62769792900689C40 /* SettingViewController.swift */; };
+		B53289D927697EDB00689C40 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53289D827697EDB00689C40 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		B53289C82766E06500689C40 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B53289CA2766E49E00689C40 /* MainActivateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActivateButton.swift; sourceTree = "<group>"; };
 		B53289D22768CBBB00689C40 /* SnapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapDetailViewController.swift; sourceTree = "<group>"; };
+		B53289D4276978F700689C40 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		B53289D62769792900689C40 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B53289D827697EDB00689C40 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +76,12 @@
 			children = (
 				B53289AE2766CAE400689C40 /* AppDelegate.swift */,
 				B53289B02766CAE400689C40 /* SceneDelegate.swift */,
+				B53289D4276978F700689C40 /* SettingViewController.xib */,
+				B53289D62769792900689C40 /* SettingViewController.swift */,
 				B53289B22766CAE400689C40 /* ViewController.swift */,
 				B53289C82766E06500689C40 /* DetailViewController.swift */,
 				B53289D22768CBBB00689C40 /* SnapDetailViewController.swift */,
+				B53289D827697EDB00689C40 /* TabBarController.swift */,
 				B53289C62766DD6A00689C40 /* BannerView.swift */,
 				B53289C22766CCAA00689C40 /* SqureBoxView.xib */,
 				B53289C42766CCF300689C40 /* SqureBoxView.swift */,
@@ -151,6 +160,7 @@
 				B53289BB2766CAE400689C40 /* LaunchScreen.storyboard in Resources */,
 				B53289C32766CCAA00689C40 /* SqureBoxView.xib in Resources */,
 				B53289B82766CAE400689C40 /* Assets.xcassets in Resources */,
+				B53289D5276978F700689C40 /* SettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +174,10 @@
 				B53289C72766DD6A00689C40 /* BannerView.swift in Sources */,
 				B53289B32766CAE400689C40 /* ViewController.swift in Sources */,
 				B53289C52766CCF300689C40 /* SqureBoxView.swift in Sources */,
+				B53289D927697EDB00689C40 /* TabBarController.swift in Sources */,
 				B53289C92766E06500689C40 /* DetailViewController.swift in Sources */,
 				B53289AF2766CAE400689C40 /* AppDelegate.swift in Sources */,
+				B53289D72769792900689C40 /* SettingViewController.swift in Sources */,
 				B53289D32768CBBB00689C40 /* SnapDetailViewController.swift in Sources */,
 				B53289B12766CAE400689C40 /* SceneDelegate.swift in Sources */,
 				B53289CB2766E49E00689C40 /* MainActivateButton.swift in Sources */,

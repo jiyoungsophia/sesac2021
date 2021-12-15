@@ -20,6 +20,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBarItem.selectedImage = UIImage(systemName: "person.fill")
+        tabBarItem.image = UIImage(systemName: "person")
+        tabBarItem.title = "디테일"
         
         [titleLabel,captionLabel, activateButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -40,9 +43,6 @@ class DetailViewController: UIViewController {
             activateButton.heightAnchor.constraint(equalToConstant: 50),
             activateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-        
-        
-        
     }
     
     func setCaptionLabelConstraints() {
@@ -79,7 +79,6 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint(item: titleLabel, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: -40).isActive = true
         
         NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 80).isActive = true
-
         
     }
 }
