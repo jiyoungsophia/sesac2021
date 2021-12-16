@@ -16,16 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        
-        //1. storyboard
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = sb.instantiateViewController(withIdentifier: "vc") as! SnapDetailViewController
-        
-        //2. XIB
-//        let bundle = Bundle(for: SettingViewController.self) //swift meta type
-//        let vc = SettingViewController(nibName: "SettingViewController", bundle: bundle)
-        
-        //3. Code
+
         let vc = HomeViewController() //nibname이 nil인 상태
         
         window?.rootViewController = TabBarController()
